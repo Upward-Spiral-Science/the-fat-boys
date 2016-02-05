@@ -13,6 +13,7 @@ data <- as.data.frame(data)
 
 
 for (i in c(1:144)) {
-	df <- as.data.frame(x = data[,i],y = data[,i])
-	p <- ggplot(df,aes(x)) + geom_density()
+	df <- as.data.frame(cbind(c(1:dim(data)[1]), data[,i]))
+	p <- ggplot(df,aes(V2)) + geom_density() + ylab('Density') + xlab('Value') + ggtitle(paste('Column',i))
+	ggsave(paste('Marginal_Column_',i,'.png'),p)
 }
