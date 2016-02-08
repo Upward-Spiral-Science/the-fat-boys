@@ -11,23 +11,36 @@ The second dataset has data for 1,119,299 synapses and an additional 3 features.
 **Descriptive**
 
 How many features do we have?
+
 Are the 1,119,299 synapses in dataset 1 and dataset 2 in the same order?
+
 What do the features represent exactly in dataset 1 correspond to exactly? 
+
 What do the features represent exactly in dataset 2 correspond to exactly? 
+
 Are some of the features constant throughout and thus irrelevant?
+
 How distinct are the features? Are any of them highly correlated?
+
 Are any of the features NaNs or Zeros or Infinity or undefined or blank? Would it affect our processing?
+
 What is the ratio between the number of features and the number of samples? Is the problem statistically well posed?
 
 
 **Exploratory** 
 
 What are the mean and standard deviations of the individual feature columns in the dataset?
+
 What are the marginal distributions of the features in the first dataset?
+
 Which features have the greatest variability among the subjects? Which have the least?
+
 Does the data form any clear clusters?
+
 How many principal components are needed to describe the data well?
+
 Are any of the subjects outliers?
+
 Does the covariance matrix exhibit any obvious structure?
 
 
