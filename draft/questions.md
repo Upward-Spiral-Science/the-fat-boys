@@ -9,6 +9,7 @@ The second dataset has data for 1,119,299 synapses and an additional 3 features.
 
 
 **Descriptive**
+
 How many features do we have?
 Are the 1,119,299 synapses in dataset 1 and dataset 2 in the same order?
 What do the features represent exactly in dataset 1 correspond to exactly? 
@@ -34,9 +35,10 @@ Does the covariance matrix exhibit any obvious structure?
 
 If our subjects (synapses) are samples x_i in X, where i goes from 1 to 1,119,299, then the 144 observed features in dataset 1 (corresponding to fluorescent intensity of biomarker antibody in the images) are y_i_q = fq(x_i), for functionals fq where q=1,...,144 and where fq: X -> Y. 
 
-If our goal is clustering, the first inferential question that we could ask is whether there is a cluster or not. More specifically, if the final optimal number of clusters k depending on some clustering paradigm is 1, then no clusters exist. If it is bigger than 1, then clusters exist. 
+If our goal is clustering, the first inferential question that we could ask is whether there is more than 1 cluster or not. More specifically, if the final optimal number of clusters k depending on some clustering paradigm is larger than 1, then clusters exist. 
 
 H0: {k = 1}
+
 HA: {k > 1}
 
 **Predictive**
