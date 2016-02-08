@@ -54,7 +54,12 @@ H0: {k = 1}
 
 HA: {k > 1}
 
-Different clustering paradigms, which will likely use different dissimilarity metrics D: X x X -> R+ and different error functions, will likely yield different results in this inferential analysis. 
+Different clustering paradigms, which will likely use different dissimilarity metrics D: X x X -> R+ and different objective functions, will likely yield different results in this inferential analysis. 
+
+In addition to clustering, we can also ask questions about the distribution of the gene expression levels. Just as a toy example, we can look at the expression level of biomarker q and test whether it is normally distributed or not. 
+
+H0: {fq(x_i) ~ Gaussian}
+HA: {fq(x_i) !~ Gaussian}
 
 **Predictive**
 
