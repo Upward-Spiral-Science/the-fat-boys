@@ -5,6 +5,7 @@ We have 2 datasets. The first dataset has data for 1,119,299 synapses and 144 fe
 
 
 **Descriptive**
+
 What are the features?
 For the first dataset, each synapse is equipped with 6 features, likely corresponding to some sort of fluorescent marker intensity values in different color channels. (this is our best guess...)
 For the second dataset, each synapse is equipped with 3 features, corresponding to the location of the synapse within the image (x, y, z or slice)
