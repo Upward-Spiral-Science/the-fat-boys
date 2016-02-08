@@ -40,9 +40,10 @@ H0: p( ||Yijq - Yij'q|| \geq || Yijq - Yi'j'q' || )
 
 **Predictive**
 
+Try to find h, of the form h in \mathcal{H} which maps each synapse onto one of 1 to k clusters such that some dissimilarity criterion or measure is minimized within each cluster. 
+
 What are the most descriptive features (f within F, where F denotes the set of all biomarker features given) that would best separate different types of synapses into their respective classes?  
 
-Try to find h, of the form h in \mathcal{H} such that some within cluster similarity criterion is minimized: i.e. argmin \sum
 
 **Causal** 
 
