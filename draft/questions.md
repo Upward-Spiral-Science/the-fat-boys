@@ -31,16 +31,17 @@ Does the covariance matrix exhibit any obvious structure?
 
 
 **Inferential** 
-If graphs Gni and Gnj for all i != j are processed the same way, is descriminability maximized?
-If our brains are samples Xi in \mathcal{X}, then the observed graphs are Yiq = fq(Xi), for processing strategies fq where q=1,...,Q, and where fq: Xi \sim Yi. If we are asking whether or not using the same functional f improves descriminability, our alernate and hypothesis and null become:
-p( ||Axy - Ax'y|| \leq || Axy - Ax'y' || ), where x is the graph observed and y is the label associated with the observed graph. If a superscript indicates processing technique, we have:
-HA: p( ||Yijq - Yij'q|| < || Yijq - Yi'j'q' || ) 
-H0: p( ||Yijq - Yij'q|| \geq || Yijq - Yi'j'q' || )
 
+If our subjects (synapses) are samples x_i in X, where i goes from 1 to 1,119,299, then the 144 observed features in dataset 1 (corresponding to fluorescent intensity of biomarker antibody in the images) are y_i_q = fq(x_i), for functionals fq where q=1,...,144 and where fq: X -> Y. 
+
+If our goal is clustering, the first inferential question that we could ask is whether there is a cluster or not. More specifically, if the final optimal number of clusters k depending on some clustering paradigm is 1, then no clusters exist. If it is bigger than 1, then clusters exist. 
+
+H0: {k = 1}
+HA: {k > 1}
 
 **Predictive**
 
-Try to find h, of the form h in \mathcal{H} which maps each synapse onto one of 1 to k clusters such that some dissimilarity criterion or measure is minimized within each cluster. 
+Try to find a classifier h, of the form h in H, which maps each synapse onto one of 1 to k clusters such that some dissimilarity criterion or measure is minimized within each cluster. (punishing large k at the same time)
 
 What are the most descriptive features (f within F, where F denotes the set of all biomarker features given) that would best separate different types of synapses into their respective classes?  
 
@@ -48,6 +49,7 @@ What are the most descriptive features (f within F, where F denotes the set of a
 **Causal** 
 
 How do the different expression levels of the present immuno-stain markers cause and influence the different functions of each class of synapses? 
+
 Does the precise location of the markers within the synapse cause functional differences on the different classes of synapses?
 
 
