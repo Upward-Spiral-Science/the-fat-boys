@@ -2,8 +2,10 @@
 
 **Opportunity:**
 
-Analysis of the genetic profile of synapses proves to be a challenging problem. Although immunofluorescence microscopy provides a powerful tool for characterizing the genetic composition of synapses, it cannot be used to localize synapses. The definitive means of synapse localization is electron microscopy (EM). 
-The recent development of conjugate array tomography, a volumetric imaging modality which allows for both immunofluorescence and EM of the same voxel, has resolved this issue. 
+Analysis of the genetic profile of synapses is a challenging problem that is under-addressed. Although immunofluorescence microscopy provides a powerful tool for characterizing the genetic composition of synapses through a limited set of markers, it cannot be used to definitively localize synapses at a high resolution. Currently, electron microscopy (EM) is the gold standard for definitive, high-resolution synapse localization.
+
+The recent development of conjugate array tomography, a volumetric imaging modality which allows for both immunofluorescence and EM of the same voxel, presents a great opportunity for high-resolution characterization of synapses using genetic data. 
+
 The full outline of the technique can be found in Collman et al [1]. Briefly, volumes of brain tissue are chemically treated, sliced into ultrathin sections, and placed onto coverslips. They are then immunostained for certain well-validated markers, imaged, and then eluted. The process can then be repeated for another group of markers. After a sufficient number of markers have been imaged, the ultrathin sections are then imaged via EM. In post-processing, the synapses can be localized from the EM data and subsequently analyzed for their genetic makeup by examining the immunofluorescence data.
 
 **Significance:**
