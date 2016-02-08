@@ -1,36 +1,25 @@
-###Does Processing Brain Images With the Same Pipeline Improve The Power of Multi-site Inference Tasks?
-*Greg Kiar*
+Summary.md
 
--------------
+Opportunity:
 
-#### Opportunity
-With recent advances in processing technologies, mapping the human brain at a 1mm resolution has become a relatively low-burden task for scientists. These processing pipelines can estimate structural or functional connectivity within the brain based on structural MRI and diffusion or functional MRI, respectively. An abundance of such data exists and is currently being collected \[HCP, FCP\] around the globe, but few labs follow the same standard or specifications in their data collection process outside their given facility. Resultantly, the data across sites can be very noticeably different in brightness, contrast, and even texture from one another, making these images - and the scientific claims drawn from them - incredibly difficult to compare. This lack of reliability and reproducibility plagues research \[NTR, PRJ\], and is not limited to MRI. This problems calls into question the validity of any scientific claims made, and hinders true unified progress of the scientific community. If a unified processing strategy for non-uniform data exists it would enable researchers to share data, collaborate, and draw stronger scientific results that can be agreed upon and refined by the community.
+Analysis of the genetic profile of synapses proves to be a challenging problem. Although immunofluorescence microscopy provides a powerful tool for characterizing the genetic composition of synapses, it cannot be used to localize synapses. The definitive means of synapse localization is electron microscopy (EM). 
+The recent development of conjugate array tomography, a volumetric imaging modality which allows for both immunofluorescence and EM of the same voxel, has resolved this issue. 
+The full outline of the technique can be found in Collman et al [1]. Briefly, volumes of brain tissue are chemically treated, sliced into ultrathin sections, and placed onto coverslips. They are then immunostained for certain well-validated markers, imaged, and then eluted. The process can then be repeated for another group of markers. After a sufficient number of markers have been imaged, the ultrathin sections are then imaged via EM. In post-processing, the synapses can be localized from the EM data and subsequently analyzed for their genetic makeup by examining the immunofluorescence data.
 
-#### Significance
-If a processing pipeline existed which strengthened the scientific claims made across pooled data it would have potential to dramatically increase the rate at which scientific claims are developed. In MRI connectomics this means that development of the understanding of macroscale brain connectivity patterns and development of diagnostic classifiers can be expedited, leading to better treatment and awareness of mental illness. Approximately 1 in 5 adults suffers from mental illness in a given year in the United States, costing approximately $200 billion in lost earnings \[NAMI\]. Among these mental illnesses, depression is the leading cause of disability around the world today \[NAMI\]. Many of these illnesses, including as Alzheimer's Disease, Autism Spectrum Disorders, ADHD, and  Schizophrenia could be described as connectopathies \[PMD\] and may appear when observing the connectome. Enabling cross-study collaboration and pooling of data would increase the rate at which diagnostic and treatment tools can be developed for these disorders, influencing the lives of billions of people.
+Significance:
 
-####Feasibility
-The m2g pipeline \[M2G\] has been developed estimate structural connectomes with a core set of parameters to maximize the test-retest descriminatbility within datasets. This pipeline has been used to generate brain graphs at multiple scales on several datasets collected across multiple sites. Datasets available for use range between dozens and thousands of scans. Within the scope of this project, we expect to be able to perform at least one complete evaluation of this experiment, and possibly to refine it further with more datasets and a larger set of processing differences. Possible setbacks may be due to the computational burden associated with processing larger datasets, and will attempt to be avoided through use of Amazon EC2 instances where applicable.
+Synapses are the fundamental building blocks of neuronal communication. While there has been recent attempts to classify cell types based on genetics and imaging, there has been no attempt to classify synapses into sub-groups besides the classical distinction between excitatory and inhibitory synapses. It is well known that synaptic dysfunction can cause many different kinds of diseases such as fragile X and Rett Syndrome. The study and characterization of synapses is thus a clinically important problem. In this study, we use well-validated markers and high resolution electron microscopy to tackle the question of synaptic diversity. With the unprecedented scale and resolution of our data, the study could characterize different classes of synapses and potentially yield further insights linking molecules and genes to synaptic structure and diseases.
 
-####Innovation
-If successful, this solution will empower reproducible science, remove significant computational duress from researchers, and strengthen future scientific claims. This will provide evidence in favour of using a unified processing strategy for data collected under slightly different acquisition schemes for applications in downstream inference tasks and production of reliable scientific discovery.
+Feasibility: 
 
+Initially the group had doubts as to how each individual synapse could be mapped to each fluorescent data entry point, but the methods outlined in Collman et al [1] were employed to resolve this concern and produce the raw data that was given to the group. First few attempts to classify each data point from a subset of the data to its respective group was not successful; we observed no clear, distinct centers when submitting the raw data to a principle component analysis pipeline. The group will try to prune away irrelevant features to achieve better clustering results through correlation analysis of the features. The data and code provided also lacked some important comments and descriptions that could hinder our progress. Despite these challenges, there are over a million synapses each with 144 features, making this problem computationally and statistically well-posed and tractable. Moreover, the huge memory required to process the whole dataset also presents a computational burden, but with access to computer clusters, computation resources should not be too big of a concern. Overall, we are confident that this project will be feasible and successful.
 
-####References
-  - [HCP] http://www.humanconnectomeproject.org/data/hcp-project/
-  - [FCP] http://fcon_1000.projects.nitrc.org/indi/CoRR/html/
-  - [NTR] http://www.nature.com/nrd/journal/v10/n9/full/nrd3439-c1.html
-  - [PRJ] https://doi.org/10.7717/peerj.148
-  - [NAMI] https://www.nami.org/Learn-More/Mental-Health-By-the-Numbers
-  - [PMD] http://www.ncbi.nlm.nih.gov/pubmed/22196113
-  - [M2G] http://m2g.io/
+Innovation:
 
+While there has been recent innovation in groups classifying cell types based on RNA-seq and morphological data, there has been no attempt to our knowledge of scientists trying to classify synapses into categories other than crude division into excitatory/inhibitory, glutamatergic/GABAergic etc. We have found no existing publications attempting to classify synapses using fluorescence scan data information, not to mention with the resolution and scale of our dataset. Thus, we conclude that this project is highly innovative. Perhaps we will be the first to study “synaptomics.”
 
-------------
+[1] Collman, F., J. Buchanan, K. D. Phend, K. D. Micheva, R. J. Weinberg, and S. J. Smith. "Mapping Synapses by Conjugate Light-Electron Array Tomography." Microscopy 64.Suppl 1 (2015): I74. Web.
 
-##Notes:
-In class jovo said the following:
-- Opportunity: "What awesome things are happening"
-- Significance: "How much does it affect a person, and how many people does it affect"
-- Feasibility: "To what degree can we solve the problem with the time and resources we have"
-- Innovation: "Of relative importance, depending where you work"
+[2] O'Rourke, Nancy A., Nicholas C. Weiler, Kristina D. Micheva, and Stephen J. Smith. "Deep Molecular Diversity of Mammalian Synapses: Why It Matters and How to Measure It." Nature Reviews Neuroscience 13 (2012): 365-79. Nature. Nature Reviews Neuroscience, June 2012. Web.
+
+[3] Vogt, Nina. "Microscopy: Synapses Seen at Different Scales." Nature Methods Nat Meth 12.6 (2015): 485. Web.
