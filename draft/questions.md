@@ -1,12 +1,10 @@
-Ivan’s summary (idk if relevant): We have 2 datasets. The first dataset has data for 1,119,299 synapses and 144 features for each synapse. Each 6 consecutive features correspond to a single fluorescent marker, for a total of 24 markers. It is as of now unclear what these 6 features represent. The second dataset has data for the same 1,119,299 synapses and an additional 3 features. These 3 features correspond to the x-location, y-location, and slice number for the corresponding synapse in the conjugate array tomography images.
-Questions About my Project
-We have D datasets, each with Ni subjects, for i = 1...D.
-Each dataset contains graphs, Gni = (V, E, A, Y) for ni=1...Ni.
-V is in the set of \mathcal{V}, with cardinality |V|. We know that \mathcal{V} is the same across all datasets.
-E is in the set of \mathcal{E} = {V x V: Vm ~ Vp}, for m,p = 1...|V|.
-A is an edge attribute which indicates weight and belongs to the set \mathbb{R}+.Implicitly, |A| = |E|. 
-Y are class labels and belong to the set {0,1}, and indicate subject gender.
-Descriptive 
+
+###Questions About my Project
+
+We have 2 datasets. The first dataset has data for 1,119,299 synapses and 144 features for each synapse. Each 6 consecutive features correspond to a single fluorescent marker, for a total of 24 markers. It is as of now unclear what these 6 features represent exactly. The second dataset has data for the same 1,119,299 synapses and an additional 3 features. These 3 features correspond to the x-location, y-location, and slice number for the corresponding synapse in the conjugate array tomography images.
+
+
+**Descriptive**
 What are the features?
 For the first dataset, each synapse is equipped with 6 features, likely corresponding to some sort of fluorescent marker intensity values in different color channels. (this is our best guess...)
 For the second dataset, each synapse is equipped with 3 features, corresponding to the location of the synapse within the image (x, y, z or slice)
