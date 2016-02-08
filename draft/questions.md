@@ -1,10 +1,10 @@
 
-Questions About My Project
+###Questions About My Project
 
 We have 2 datasets. The first dataset has data for 1,119,299 synapses and 144 features for each synapse. Each 6 consecutive features correspond to a single fluorescent marker, for a total of 24 markers. It is as of now unclear what these 6 features represent exactly. The second dataset has data for the same 1,119,299 synapses and an additional 3 features. These 3 features correspond to the x-location, y-location, and slice number for the corresponding synapse in the conjugate array tomography images.
 
 
-Descriptive
+**Descriptive**
 What are the features?
 For the first dataset, each synapse is equipped with 6 features, likely corresponding to some sort of fluorescent marker intensity values in different color channels. (this is our best guess...)
 For the second dataset, each synapse is equipped with 3 features, corresponding to the location of the synapse within the image (x, y, z or slice)
@@ -17,7 +17,8 @@ How distinct are the features? Are they highly correlated?
 Are the number of features and the number of samples in a good proportion?
 
 
-Exploratory 
+**Exploratory** 
+
 What are the mean and standard deviations of the individual feature columns in the dataset?
 What are the marginal distributions of the features in the first dataset?
 Which features have the greatest variability among the subjects? Which have the least?
@@ -27,7 +28,7 @@ Are any of the subjects outliers?
 Does the covariance matrix exhibit any obvious structure?
 
 
-Inferential 
+**Inferential** 
 If graphs Gni and Gnj for all i != j are processed the same way, is descriminability maximized?
 If our brains are samples Xi in \mathcal{X}, then the observed graphs are Yiq = fq(Xi), for processing strategies fq where q=1,...,Q, and where fq: Xi \sim Yi. If we are asking whether or not using the same functional f improves descriminability, our alernate and hypothesis and null become:
 p( ||Axy - Ax'y|| \leq || Axy - Ax'y' || ), where x is the graph observed and y is the label associated with the observed graph. If a superscript indicates processing technique, we have:
@@ -35,12 +36,16 @@ HA: p( ||Yijq - Yij'q|| < || Yijq - Yi'j'q' || )
 H0: p( ||Yijq - Yij'q|| \geq || Yijq - Yi'j'q' || )
 
 
-Predictive 
+**Predictive**
+
 What are the most descriptive features (f within F, where F denotes the set of all biomarker features given) that would best separate different types of synapses into their respective classes?  
 
-Causal 
+**Causal** 
+
 How do the different patterns of the present immuno-stain markers influence the functions of each class of synapses? 
-Mechanistic 
+
+**Mechanistic** 
+
 How does a difference in gene expression determine the different patterns of the present immuno-stain markers and thus influence the functions of each class of synapses?
 Does the precise location of the markers within the synapse provide information on the classes of synapses?
 
