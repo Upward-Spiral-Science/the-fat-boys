@@ -59,6 +59,7 @@ Different clustering paradigms, which will likely use different dissimilarity me
 In addition to clustering, we can also ask questions about the distribution of the gene expression levels. Just as a toy example, we can look at the expression level of biomarker q and test whether it is normally distributed or not. 
 
 H0: {fq(x_i) ~ Gaussian}
+
 HA: {fq(x_i) !~ Gaussian}
 
 **Predictive**
