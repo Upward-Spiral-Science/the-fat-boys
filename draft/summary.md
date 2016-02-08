@@ -2,15 +2,13 @@
 
 **Opportunity:**
 
-Analysis of the genetic profile of synapses is a challenging problem that is under-addressed. Although immunofluorescence microscopy provides a powerful tool for characterizing the genetic composition of synapses through a limited set of markers, it cannot be used to definitively localize synapses at a high resolution. Currently, electron microscopy (EM) is the gold standard for definitive, high-resolution synapse localization.
+Analysis of the genetic expression profile of synapses is a challenging problem that is under-addressed. Although immunofluorescence microscopy provides a powerful tool for characterizing the genetic composition of synapses through a limited set of markers, it cannot be used to definitively localize synapses at a high resolution. Nor does it provide much structural or morphological information about the synapses. Currently, electron microscopy (EM) is the gold standard for definitive, high-resolution synapse localization as well as structural and morphological synapse characterization.
 
-The recent development of conjugate array tomography, a volumetric imaging modality which allows for both immunofluorescence and EM of the same voxel, presents a great opportunity for high-resolution characterization of synapses using genetic data. 
-
-The full outline of the technique can be found in Collman et al [1]. Briefly, volumes of brain tissue are chemically treated, sliced into ultrathin sections, and placed onto coverslips. They are then immunostained for certain well-validated markers, imaged, and then eluted. The process can then be repeated for another group of markers. After a sufficient number of markers have been imaged, the ultrathin sections are then imaged via EM. In post-processing, the synapses can be localized from the EM data and subsequently analyzed for their genetic makeup by examining the immunofluorescence data.
+Synapse type diversity is potentially a complicated and important subject of research. There has been little analysis on the characterization of synapse type, partially due to lack of the appropriate tools. The recent development of conjugate array tomography, a volumetric imaging modality which allows for both immunofluorescence and EM of the same voxel, presents a great opportunity for high-resolution characterization of synapses using both genetic expression and microscopy data, allowing us to tackle this important problem. The full outline of the technique can be found in Collman et al [1]. 
 
 **Significance:**
 
-Synapses are the fundamental building blocks of neuronal communication. While there has been recent attempts to classify cell types based on genetics and imaging, there has been no attempt to classify synapses into sub-groups besides the classical distinction between excitatory and inhibitory synapses. It is well known that synaptic dysfunction can cause many different kinds of diseases such as fragile X and Rett Syndrome. The study and characterization of synapses is thus a clinically important problem. In this study, we use well-validated markers and high resolution electron microscopy to tackle the question of synaptic diversity. With the unprecedented scale and resolution of our data, the study could characterize different classes of synapses and potentially yield further insights linking molecules and genes to synaptic structure and diseases.
+Synapses are the fundamental building blocks of neuronal communication. While there has been recent attempts to classify cell types based on genetics and imaging, there has been no attempt to classify synapses into sub-groups besides the classical distinction between excitatory and inhibitory synapses. It is well known that synaptic dysfunction can cause many different kinds of diseases such as fragile X and Rett Syndrome. The study and characterization of synapses is thus a clinically important problem that could potentially improve our understanding of diseases that affect millions of patients. In this study, we use well-validated markers and high resolution electron microscopy to tackle the question of synaptic diversity. With the unprecedented scale and resolution of our data, the study could characterize different classes of synapses and potentially yield further insights linking molecules and genes to synaptic structure and diseases.
 
 **Feasibility:** 
 
@@ -18,9 +16,10 @@ Initially the group had doubts as to how each individual synapse could be mapped
 
 **Innovation:**
 
-While there has been recent innovation in groups classifying cell types based on RNA-seq and morphological data, there has been no attempt to our knowledge of scientists trying to classify synapses into categories other than crude division into excitatory/inhibitory, glutamatergic/GABAergic etc. We have found no existing publications attempting to classify synapses using fluorescence scan data information, not to mention with the resolution and scale of our dataset. Thus, we conclude that this project is highly innovative. Perhaps we will be the first to study “synaptomics.”
+While there has been recent innovation in groups classifying cell types based on RNA-seq and morphological data, there has been no attempt to our knowledge of scientists trying to classify synapses into categories other than crude division into excitatory/inhibitory, glutamatergic/GABAergic etc. We have found no existing publications attempting to classify synapses using fluorescence scan data information, not to mention with the resolution and scale of our dataset. Thus, we conclude that this project is highly innovative. Perhaps we will be the first to study “synaptomics.” 
 
 **References:**
+
 [1] Collman, F., J. Buchanan, K. D. Phend, K. D. Micheva, R. J. Weinberg, and S. J. Smith. "Mapping Synapses by Conjugate Light-Electron Array Tomography." Microscopy 64.Suppl 1 (2015): I74. Web.
 
 [2] O'Rourke, Nancy A., Nicholas C. Weiler, Kristina D. Micheva, and Stephen J. Smith. "Deep Molecular Diversity of Mammalian Synapses: Why It Matters and How to Measure It." Nature Reviews Neuroscience 13 (2012): 365-79. Nature. Nature Reviews Neuroscience, June 2012. Web.
