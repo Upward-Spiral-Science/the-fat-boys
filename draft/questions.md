@@ -41,6 +41,8 @@ H0: {k = 1}
 
 HA: {k > 1}
 
+Different clustering paradigms, which will likely use different dissimilarity metrics D: X x X -> R+ and different error functions, will likely yield different results in this inferential analysis. 
+
 **Predictive**
 
 Try to find a classifier h, of the form h in H, which maps each synapse onto one of 1 to k clusters such that some dissimilarity criterion or measure is minimized within each cluster. (punishing large k at the same time)
