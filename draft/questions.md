@@ -1,21 +1,22 @@
 
 ###Questions About My Project
 
-We have 2 datasets. The first dataset has data for 1,119,299 synapses and 144 features for each synapse. Each 6 consecutive features correspond to a single fluorescent marker, for a total of 24 markers. It is as of now unclear what these 6 features represent exactly. The second dataset has data for the same 1,119,299 synapses and an additional 3 features. These 3 features correspond to the x-location, y-location, and slice number for the corresponding synapse in the conjugate array tomography images.
+We have 2 datasets. 
+
+The first dataset has data for 1,119,299 subjects (synapses) and 144 features for each subject. Each 6 consecutive features, to our best guess, correspond to a single fluorescent marker, for a total of 144/6 = 24 markers. It is as of now unclear what these 6 features represent exactly. 
+
+The second dataset has data for 1,119,299 synapses and an additional 3 features. These 3 features, to our best guess, correspond to the x-location, y-location, and slice number for the corresponding synapse in the conjugate array tomography images.
 
 
 **Descriptive**
-
-What are the features?
-For the first dataset, each synapse is equipped with 6 features, likely corresponding to some sort of fluorescent marker intensity values in different color channels. (this is our best guess...)
-For the second dataset, each synapse is equipped with 3 features, corresponding to the location of the synapse within the image (x, y, z or slice)
 How many features do we have?
-taken in total, we have 6+3 = 9 features
-Are some of the features constant throughout all synapses and thus irrelevant?
-Judging from a preliminary look at the data, none of the features are constant throughout all synapses. Thus, all or most of them might be potentially relevant. 
-What does each column from the raw data set given represent?
-How distinct are the features? Are they highly correlated?
-Are the number of features and the number of samples in a good proportion?
+Are the 1,119,299 synapses in dataset 1 and dataset 2 in the same order?
+What do the features represent exactly in dataset 1 correspond to exactly? 
+What do the features represent exactly in dataset 2 correspond to exactly? 
+Are some of the features constant throughout and thus irrelevant?
+How distinct are the features? Are any of them highly correlated?
+Are any of the features NaNs or Zeros or Infinity or undefined or blank? Would it affect our processing?
+What is the ratio between the number of features and the number of samples? Is the problem statistically well posed?
 
 
 **Exploratory** 
@@ -41,12 +42,17 @@ H0: p( ||Yijq - Yij'q|| \geq || Yijq - Yi'j'q' || )
 
 What are the most descriptive features (f within F, where F denotes the set of all biomarker features given) that would best separate different types of synapses into their respective classes?  
 
+
+
 **Causal** 
 
-How do the different patterns of the present immuno-stain markers influence the functions of each class of synapses? 
+How do the different expression levels of the present immuno-stain markers cause and influence the different functions of each class of synapses? 
+Does the precise location of the markers within the synapse cause functional differences on the different classes of synapses?
+
 
 **Mechanistic** 
 
 How does a difference in gene expression determine the different patterns of the present immuno-stain markers and thus influence the functions of each class of synapses?
-Does the precise location of the markers within the synapse provide information on the classes of synapses?
+
+
 
