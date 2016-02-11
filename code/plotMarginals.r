@@ -15,5 +15,11 @@ data <- as.data.frame(data)
 for (i in c(1:144)) {
 	df <- as.data.frame(cbind(c(1:dim(data)[1]), data[,i]))
 	p <- ggplot(df,aes(V2)) + geom_density() + ylab('Density') + xlab('Value') + ggtitle(paste('Column',i))
-	ggsave(paste('Marginal_Column_',i,'.png'),p)
+	ggsave(paste('Density_Marginal_Column_',i,'.png'),p)
+}
+
+for (i in c(1:144)) {
+	df <- as.data.frame(cbind(c(1:dim(data)[1]), data[,i]))
+	p <- ggplot(df,aes(V2)) + geom_histogram() + ylab('Density') + xlab('Value') + ggtitle(paste('Column',i))
+	ggsave(paste('Hist_Marginal_Column_',i,'.png'),p)
 }
