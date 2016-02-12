@@ -3,6 +3,7 @@ library(ggplot2)
 library(gtable)
 library(LICORS)
 library(tsne)
+library(RColorBrewer)
 
 labels = c('Synap', 'Synap', 'VGlut1', 'VGlut1', 'VGlut2', 'VGlut3', 'PSD', 'Glur2', 'NDAR1', 'NR2B', 'GAD', 'VGAT', 'PV',
 'Gephyr', 'GABAR1', 'GABABR', 'CR1', '5HT1A', 'NOS', 'TH', 'VACht', 'Synapo', 'Tubuli', 'DAPI')
@@ -189,6 +190,33 @@ cluster_whole <- kmeanspp(data, k = 8)
 set.seed(42);rand_rows = sample(1:dim(data)[1],1000)
 subsample2 <- data[rand_rows,]
 
-ecb <- function(x,y){ plot(x,t='n');  text(x,labels=rownames(subsample2) }
+colors = rainbow(length(unique(subsample1[,13])))
+ecb = function(x,y){ plot(x,t='n'); text(x, col=colors[subsample1[,13]]) }
 tsne_data <- tsne(subsample2, epoch_callback = ecb, perplexity=50,epoch = 10)
+
+tsne_embed <- tsne_data
+colnames(tsne_embed) <- c('E1','E2')
+
+df <- as.data.frame(cbind(tsne_embed, subsample1))
+
+jet.colors <- colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
+
+theme_none <- theme(
+	panel.grid.major = element_blank(),
+	panel.grid.minor = element_blank(),
+	panel.background = element_blank(),
+	axis.title.x = element_text(colour=NA),
+	axis.title.y = element_text(size=0),
+	axis.text.x = element_blank(),
+	axis.text.y = element_blank(),
+	axis.line = element_blank(),
+	axis.ticks.length = unit(0, "cm")
+)
+
+for (i in c(1:144)) {
+	p9 <- ggplot(df, aes(E1, E2)) + geom_point(aes_string(colour = paste('V',i,sep = "")),alpha = 0.75) + scale_colour_gradientn(colours =  jet.colors(100), name =  paste('Column ',i,sep = "")) + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank())
+	ggsave(paste('tSNE_colored_on_column_',i,'.png'),p8)
+}
+
+
 
