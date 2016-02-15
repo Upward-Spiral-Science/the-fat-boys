@@ -1,6 +1,6 @@
-#Attempts different ways of clustering the data
+#Attempts different ways of Kmeans clustering the data
 
-Clustering <- function(data){
+kmeansClustering <- function(data){
 	require(ggplot2)
 	require(gtable)
 	require(LICORS)
@@ -32,7 +32,7 @@ Clustering <- function(data){
 	cluster <- kmeanspp(subsample2, k = 2)
 	clust_graph <- as.data.frame(cbind(data_embed,cluster$cluster))
 
-	p2 <- ggplot(clust_graph,aes(PC1,PC2,color = V3)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('PCA Embedding of Random 10000 Rows with 2 Clusters')
+	p2 <- ggplot(clust_graph,aes(PC1,PC2,color = V3)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('PCA Embedding of Random 10000 Rows with 2 KMeans Clusters')
 
 	#Try to cluster excitatory and inhibitory
 	#Excitatory is 'VGlut1', 'VGlut1', 'VGlut2', 'VGlut3', 'Glur2'
@@ -59,7 +59,7 @@ Clustering <- function(data){
 	cluster <- kmeanspp(subsample1, k = 2)
 	clust_graph <- as.data.frame(cbind(data_embed,cluster$cluster))
 
-	p4 <- ggplot(clust_graph,aes(PC1,PC2,color = V3)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('PCA Embedding of Random 10000 Rows with 2 Clusters')
+	p4 <- ggplot(clust_graph,aes(PC1,PC2,color = V3)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('Embedding with 2 KMeans Clusters (Excitatory and Inhibitory Only)')
 
 	#This seems to not produce obvious clusters. How strange. Let us try something different.
 	#For excitatory include 'VGlut1'
@@ -79,14 +79,21 @@ Clustering <- function(data){
 	#Plot using ggplot2
 	embed_graph <- as.data.frame(data_embed);
 
-	p5 <- ggplot(embed_graph,aes(PC1,PC2)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('PCA Embedding of Random 10000 Rows')
+	p5 <- ggplot(embed_graph,aes(PC1,PC2)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('VGlut1 Integrated Brightness vs GABAR1 Integrated Brightness')
 
 	#Conduct Kmeans
 	cluster <- kmeanspp(subsample2, k = 2)
 	clust_graph <- as.data.frame(cbind(data_embed,cluster$cluster))
 
-	p6 <- ggplot(clust_graph,aes(PC1,PC2,color = cluster$cluster)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('PCA Embedding of Random 10000 Rows with 2 Clusters')
+	p6 <- ggplot(clust_graph,aes(PC1,PC2,color = cluster$cluster)) + geom_point(alpha = 0.75)  + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank()) + ggtitle('VGlut1 Integrated Brightness vs GABAR1 Integrated Brightness with 2 Clusters')
 
+	print(p1)
+	print(p2)
+	print(p3)
+	print(p4)
+	print(p5)
+	print(p6)
+}
 	##Try t-SNE
 	#Subsample 1000 rows
 	set.seed(42);rand_rows = sample(1:dim(data)[1],1000)
@@ -105,7 +112,7 @@ Clustering <- function(data){
 	#Color it based on the values in different columns
 	for (i in c(1:dim(data)[2])) {
 		p7 <- ggplot(df, aes(E1, E2)) + geom_point(aes_string(colour = paste('V',i,sep = "")),alpha = 0.75) + scale_colour_gradientn(colours =  jet.colors(100), name =  paste('Column ',i,sep = "")) + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank())
-		ggsave(paste('tSNE_colored_on_column_',i,'_perplexity50.png',sep=""),p7)
+		#ggsave(paste('tSNE_colored_on_column_',i,'_perplexity50.png',sep=""),p7)
 	}
 
 	##Try t-SNE with different perplexity (in this case 20)
@@ -123,7 +130,7 @@ Clustering <- function(data){
 	#Color it based on the values in different columns
 	for (i in c(1:dim(data)[2])) {
 		p8 <- ggplot(df, aes(E1, E2)) + geom_point(aes_string(colour = paste('V',i,sep = "")),alpha = 0.75) + scale_colour_gradientn(colours =  jet.colors(100), name =  paste('Column ',i,sep = "")) + theme_none + theme(legend.text=element_text(size=14), legend.title = element_text(size = 20),panel.background = element_blank(), plot.background = element_blank())
-		ggsave(paste('tSNE_colored_on_column_',i,'_perplexity20.png',sep=""),p8)
+		#ggsave(paste('tSNE_colored_on_column_',i,'_perplexity20.png',sep=""),p8)
 	}
 }
 
