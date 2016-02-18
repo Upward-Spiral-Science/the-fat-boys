@@ -1,0 +1,10 @@
+1) Write F (model of the data - which includes both the null and the alternative distributions)
+2) Formalize the test
+3) Describe the test statistic
+4) Sample from F in F_0
+5) Plot power vs n
+6) Sample from F in F1
+7)
+8) Apply to data
+
+Steps 2-7 are called prospective power analysis
