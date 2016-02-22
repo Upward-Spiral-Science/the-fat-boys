@@ -1,4 +1,4 @@
-#Driver funciton for marginal_inference. Feeds individual columns from input data to marginal_inference to conduct hypothesis tests.
+#Driver function for marginal_inference. Feeds individual columns from input data to marginal_inference to conduct hypothesis tests.
 
 conductInference <- function(data,maxK = 3, nboot = 10, power = TRUE, columns_to_analyze = 4 * c(0:23) + 1){
 	require(ggplot2)
