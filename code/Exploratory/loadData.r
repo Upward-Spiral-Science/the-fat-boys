@@ -1,6 +1,6 @@
 #This code ingests the provided dataset, throws out columns 5 and 6, and labels the columns.
 
-loadData <- function(){
+loadData <- function(filepath = 'C:/Users/iakuznet/Desktop/the-fat-boys/data'){
 	require(data.table)
 	
 	#The data is composed of 144 columns, with each 6 consecutive columns corresponding to 1 of 24 markers. Apparently column 5 and 6 of the data are unnecessary and should be thrown out.
@@ -21,7 +21,6 @@ loadData <- function(){
 	}
 	
 	#Change to relevant location of file
-	filepath = 'C:/Users/iakuznet/Desktop/the-fat-boys/data'
 	setwd(filepath)
 
 	#Load in file using data.tables fread()
