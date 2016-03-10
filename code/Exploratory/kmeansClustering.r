@@ -84,5 +84,5 @@ kmeansClustering <- function(data){
 	print(p3)
 	print(p4)
 	print(p5)
-	print(p6)
+	print(p6)	
 }
