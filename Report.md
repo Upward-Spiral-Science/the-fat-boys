@@ -55,3 +55,23 @@ Next we want to see if each marker could be used to predict another marker. To d
 
 ![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot3.png "Plot3")
 
+Here we notice that with the classifier which performs significantly better than the others is the Linear Discriminant Analysis, which was expected due to the way we created the labels. Regardless of the classifiers used, in most trials, a marker could be predicted by other markers, which suggests coexpression.
+
+
+Given a chosen marker, rather than using all other markers as the features, we then proceed to only use a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. As a future step, we will proceed to investigate why this is the case. 
+
+**Testing Assumptions**
+
+
+**Next Steps**
+
+
+We have made significant progress in terms of simply exploring our datasets and characterizing some of their features. However, one of the central goals of the project is to actually manage to cluster our synapses into different categories. Although we have significant indirect evidence for the existence of more than 1 cluster within the marker dataset, we have, so far, been unable to actually directly visualize it. Future work will focus on this latter aspect. 
+In order to actually visualize the clusters, we will most likely need to change our approach. So far we have simply tried to cluster on the normalized or log-normalized feature columns. Equivalently, we have attempted to separate the synapses by examining where their values feature lie within the individual marginal feature columns. This approach assumes a significant amount of independence between the feature columns, which based off of the correlation matrix, is a faulty assumption. Going forward, we will likely attempt to separate the features based on the joint distributions of multiple feature columns or even the conditional distributions of two or more feature columns.
+
+**Methods**
+
+
+Each of the questions required code and (for the inferential, predictive, and assumption checking portions) mathematical theory. This is all explained in detail in each file, tabulated below. Here, we will discuss the methods used in each of these sections, rationalize decision made, and discuss alternatives that could have been performed instead.
+
+
