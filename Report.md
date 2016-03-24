@@ -1,8 +1,6 @@
-Table of Contents: 
-Overview Scientific 
+**Overview**
 
-
-Questioning 
+Scientific Questioning 
 
 
 Descriptive Analysis 
@@ -21,6 +19,23 @@ Testing Assumptions
 
 
 Next Steps 
+
+
+- **Methods**
+
+Descriptive Analysis 
+
+
+Exploratory Analysis 
+
+
+Inferential Analysis 
+
+
+Predictive Analysis 
+
+
+Testing Assumptions 
 
 
 **Overview**
