@@ -84,3 +84,77 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Predictive    | [the-fat-boys/draft/Assignment5_Classification_FatBoys.ipynb] |
 | Testing Assumptions    | [the-fat-boys/draft/Assignment6_Checking_Assumptions_Fatboys.ipynb]      | 
 
+
+**Descriptive Analysis**
+
+
+Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
+
+
+**Exploratory Analysis**
+
+
+We asked the following questions: 
+
+
+1) What are the mean and standard deviations of the individual feature columns in the dataset? 
+
+
+2) What are the marginal distributions of the features in the first dataset? 
+
+
+3) Which features have the greatest variability among the subjects? Which have the least?
+
+
+4) Does the data form any clear clusters?
+
+
+5) How many principal components are needed to describe the data well?
+
+
+6) Does the covariance matrix exhibit any obvious structure?
+
+
+The answer to (1) was a straightforward computation. We completed (2) by constructing a kernel density estimate from the individual feature columns. (3) was done by examining the previously constructed marginals. (4) was done by using PCA/k-means and t-SNE. (5) was done by constructing a scree plot. (6) was done through visual inspection of the covariance matrix.
+
+
+**Inferential Analysis**
+
+
+Here we conducted hypothesis testing on specific feature columns of our data to check whether it formed clusters. We assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 4. In other words:
+
+
+F0∼GMM(k)
+
+
+FA∼GMM(k+1)
+
+
+H0:n=k
+
+
+HA:n=k+1
+
+
+Our test statistic was: 
+
+
+X=−2(log(λ))
+
+
+Here, the λ is the likelihood ratio between the alternative and the null, i.e.
+
+
+λ=likelihood_A* / likelihood_0*
+
+
+The * indicates that these likelihoods are optimal. In our implementation we used an EM approach to calculate the optimal λ using the normalmixEM method implemented within the mixtools R package. We used bootstrapping to sample from the null and alternative distributions.
+
+
+**Predictive Analysis**
+
+
+As described in the previous section, we iteratively went through all markers and in each trial used all other markers as features to train a classifiers for the marker being iterated through. Some of the tests were non-parametric (LDA, QDA), while others are not(K-nearest neighbour, Linear SVM, and Random Forest). The parameters were used were recommended by the skylearn documentation, and we could customize them to obtain better results.
+Below outlines the performance of each of these classifiers tested on simulated data sampled from a Gaussian distribution.
+
+
