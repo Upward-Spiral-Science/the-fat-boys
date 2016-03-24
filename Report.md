@@ -75,16 +75,12 @@ In order to actually visualize the clusters, we will most likely need to change 
 Each of the questions required code and (for the inferential, predictive, and assumption checking portions) mathematical theory. This is all explained in detail in each file, tabulated below. Here, we will discuss the methods used in each of these sections, rationalize decision made, and discuss alternatives that could have been performed instead.
 
 
-Question Type
-Code
-Descriptive
-the-fat-boys/draft/questions.md
-Exploratory
-the-fat-boys/draft/Assignment3.ipynb
-Inferential
-the-fat-boys/draft/Assignment4.ipynb
-Predictive
-the-fat-boys/draft/Assignment5_Classification_FatBoys.ipynb
-Testing Assumptions
-the-fat-boys/draft/Assignment6_Checking_Assumptions_Fatboys.ipynb
+
+| Question Type       | Code           |
+| ------------- |:-------------:| 
+| Descriptive     | [the-fat-boys/draft/questions.md] |
+| Exploratory    | [the-fat-boys/draft/Assignment3.ipynb]     | 
+| Inferential | [the-fat-boys/draft/Assignment4.ipynb]     | 
+| Predictive    | [the-fat-boys/draft/Assignment5_Classification_FatBoys.ipynb] |
+| Testing Assumptions    | [the-fat-boys/draft/Assignment6_Checking_Assumptions_Fatboys.ipynb]      | 
 
