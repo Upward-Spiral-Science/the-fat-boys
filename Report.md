@@ -1,6 +1,8 @@
-**Overview**
+**Table Of Contents**
 
-Scientific Questioning 
+Overview
+
+**Scientific Questioning** 
 
 
 Descriptive Analysis 
@@ -190,3 +192,9 @@ Below outlines the performance of each of these classifiers tested on simulated 
 
 
 ![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot4.png "Plot4")
+
+
+*Testing Assumptions*
+
+
+We test independence by inspecting the correlation matrix, and we test identitical distribution assumption by looking at the optimal number of clusters. 
