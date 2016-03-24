@@ -43,6 +43,15 @@ The natural first step when working with any data is to ask exploratory and desc
 **Inferential Analysis**
 We are now primed to further search our datasets for clusters. We proceeded by using inference analysis to determine how many clusters individual feature columns contained. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 4. For VGlut1 we achieved the following results:
 
-Inline-style: 
 ![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot1.png "Plot1")
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot2.png "Plot2")
+
+Clearly, for VGlut1, inference testing supports k > 1. For the feature columns we examined, our inference testing results support the existence of clusters within the data.
+
+
+**Predictive Analysis**
+
+Next we want to see if each marker could be used to predict another marker. To do so for any arbitrary chosen marker, we employed all other markers as the features to build a classifier for the chosen feature. To create labels for the chosen marker, we assign the expression instances into two groups through thresholding. Several types of classifiers were trained and tested using LOO cross-validation, and some results are shown in the figure below. 
+
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot3.png "Plot3")
 
