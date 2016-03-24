@@ -62,6 +62,18 @@ Given a chosen marker, rather than using all other markers as the features, we t
 
 **Testing Assumptions**
 
+We assume that integrated brightness features of all 24 markers are sampled in an i.i.d. fashion. This is both an independent and identical assumption.
+
+
+To check independence, check that off diagonal correlation is approximately 0. To check indenticality, check that the optimal number of clusters is approximately 1 under GMM model. 
+
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot5.png "Plot5")
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot6.png "Plot6")
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot7.png "Plot7")
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot8.png "Plot8")
+
+
+
 
 **Next Steps**
 
@@ -158,3 +170,4 @@ As described in the previous section, we iteratively went through all markers an
 Below outlines the performance of each of these classifiers tested on simulated data sampled from a Gaussian distribution.
 
 
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot4.png "Plot4")
