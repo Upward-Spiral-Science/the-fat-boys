@@ -44,5 +44,5 @@ The natural first step when working with any data is to ask exploratory and desc
 We are now primed to further search our datasets for clusters. We proceeded by using inference analysis to determine how many clusters individual feature columns contained. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 4. For VGlut1 we achieved the following results:
 
 Inline-style: 
-![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/figs/Plot1.png "Plot1")
+![alt text](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/Plot1.png "Plot1")
 
