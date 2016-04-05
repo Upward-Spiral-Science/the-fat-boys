@@ -1,0 +1,8 @@
+Kevin Huang:
+  1) Coming up with three other metrics to evaulaute the validity of each called synapse on the raw synapsin channel image
+  2) Quantify and assign a p-value to each called synapse based on the metric above
+  3) Finalize on a metric that effectively discrimately elimate the noise in the synapsins channel 
+  4) Try out DBscan clustering on the new data
+  5) Use ARI and MNI to evaluate the clustering results.
+  
+  
