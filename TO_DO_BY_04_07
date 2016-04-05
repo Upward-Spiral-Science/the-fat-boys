@@ -5,3 +5,9 @@ Kevin Huang:
   4) Try out DBscan clustering on the new data
   5) Use ARI and MNI to evaluate the clustering results
   
+Ivan Kuznetsov:
+  1) Use ARI to evaluate marker clustering results presented in last weeks results
+  2) Generate pseudo-labels for excitoary/inhbiitory ppre/post-synaptic via the methid presented in last weeks results 
+  3) Implement RF clustering
+  4) Try rank-based clustering methods for marker clustering
+  5) Try rank-based clustering methods for synapse clustering
