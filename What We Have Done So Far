@@ -1,0 +1,11 @@
+What we have done/are doing:
+
+Explored new ways to filter out outliers and bad synapses (PAMK, robust PCA etc)
+Explored the correlation structure/clustering on not just the excitatory/inhibitory synapses but also on other synaptic types (5HT)
+Explored the correlation structure/clustering on not just the integrated and local brightness but also on the distance to center and moment of inertia features
+Use Adjusted Rand Index to quantify our clustering results
+	- Thresholding on Tublin Channel and Synapsin Channel
+	- Apply Spectral & K-mean Clustering to the resulting data
+	- Run ARI to test the clustering result
+		- comparing to excitorary labels based on the Vglut1 channel
+Looking at Raw Image to Analyze the Called Synapse Positions
