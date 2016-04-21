@@ -14,9 +14,11 @@ In order to gauge our sanity here, I have conducted a literature search.
 
 In summary, it is not unheard of that neurons can release both glutamate and GABA, and in certain systems across different organisms there has been lots of published evidence of colocalizations. 
 
-**The core question is not why VGlut colocalizes with GABAR, but rather why VGlut does not colocalize with VGAT/GAD etc given that it colocalizes with GABAR **
+Many papers indicate that VGlut colocalizes with GABAR, but also with VGAT/GAD.
 
-**Fattorini et al 2015**
+**The core question is not why VGlut colocalizes with GABAR, but rather why VGlut does not colocalize with VGAT/GAD etc given that it colocalizes with GABAR**
+
+**Fattorini et al 2015** (shows in cortex)
 
 -In adult neocortex, VGLUT1 (also known as SLC17A7), the main glutamate vesicular transporter, and VGAT (also known as SLC32A1), the γ‐aminobutyric acid (GABA) vesicular transporter, are co‐expressed in a subset of axon terminals forming both symmetric and asymmetric synapses, where they are sorted into the same vesicles. 
 
@@ -39,6 +41,9 @@ Although initially argued , the growing and convincing experimental evidence  st
 corelease at MFs. Previous data have shown that GABA, coreleased at these glutamatergic synapses, mainly activates postsynaptic
  and presynaptic ionotropic type A GABA receptors (GABAARs).
  
+ **Zander et al 2010**
+ 
+ -Using immunoisolation of synaptic vesicles, we now show that VGLUT2 and VGAT, and also VGLUT1 and VGLUT2, coexist in a sizeable pool of vesicles. VGAT immunoisolates transport glutamate in addition to GABA. Furthermore, VGLUT activity enhances uptake of GABA and monoamines. Postembedding immunogold double labeling revealed that VGLUT1, VGLUT2, and VGAT coexist in mossy fiber terminals of the hippocampal CA3 area. 
  
 **From Kao et al 2004, Yang and Yazulla, 1994**
 
