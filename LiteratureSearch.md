@@ -16,6 +16,8 @@ In summary, it is not unheard of that neurons can release both glutamate and GAB
 
 Many papers indicate that VGlut colocalizes with GABAR, but also with VGAT/GAD.
 
+Rough manual look at NeuroDataViz indicates that colocalization is not an impossibility. The glutamatergic stacka and the GABAergic stack looks like they correspond very well.
+
 **The core question is not why VGlut colocalizes with GABAR, but rather why VGlut does not colocalize with VGAT/GAD etc given that it colocalizes with GABAR**
 
 **Fattorini et al 2015** (shows in cortex)
