@@ -12,15 +12,39 @@ It is unlikely that our analysis is wrong since Jesse and us independently repli
 
 In order to gauge our sanity here, I have conducted a literature search. 
 
+In summary, it is not unheard of that neurons can release both glutamate and GABA, and in certain systems across different organisms there has been lots of published evidence of colocalizations. 
+
+**The core question is not why VGlut colocalizes with GABAR, but rather why VGlut does not colocalize with VGAT/GAD etc given that it colocalizes with GABAR **
+
+**Fattorini et al 2015**
+
+-In adult neocortex, VGLUT1 (also known as SLC17A7), the main glutamate vesicular transporter, and VGAT (also known as SLC32A1), the γ‐aminobutyric acid (GABA) vesicular transporter, are co‐expressed in a subset of axon terminals forming both symmetric and asymmetric synapses, where they are sorted into the same vesicles. 
+
+
 **From Valente et al 2015**
+
+- displayed pictures of colocalization between VGlut1 and GabaRs 
+
+- displayed evidence that there could be GABAergic release from glutamatergic neurons
+ 
+- also showed that VGlut should colocalize with GAD and VGAT (since these are what associates with GABAR)
+
+- their summary: 
 
 In the last years, an increasing amount of experimental evidence has demonstrated an abundant coexpression
 of VGLUT1 and VGAT in retina bipolar cells as well as in cortical and hippocampal glutamatergic synapses
-(Kao et al. 2004; Fattorini et al. 2009; Zander et al. 2010). Moreover, electrophysiological studies suggested
-that GABA is coreleased from glutamatergic hippocampal mossy fiber terminals (MFTs) during postnatal development
-(Walker et al. 2001; Gutiérrez 2003; Safiulina et al. 2006) or  in the adult after induction of hyperexcitability
-(Gutiérrez 2000; Gutiérrez and Heinemann 2001; Gómez-Lira et al. 2002; RomoParra et al. 2003; Treviño and Gutiérrez 2005)
-. Although initially argued (Uchigashima et al. 2007), the growing and convincing experimental evidence (Safiulina et al. 2006
-; for review, see Gutiérrez 2009; Beltrán and Gutiérrez 2012; Cabezas et al. 2012) strengthened considerably the notion of GABA
+. Moreover, electrophysiological studies suggested that  GABA is coreleased from glutamatergic hippocampal 
+mossy fiber terminals (MFTs) during postnatal development or in the adult after induction of hyperexcitability. 
+Although initially argued , the growing and convincing experimental evidence  strengthened considerably the notion of GABA
 corelease at MFs. Previous data have shown that GABA, coreleased at these glutamatergic synapses, mainly activates postsynaptic
-(Gutiérrez 2003; Safiulina et al. 2006) and presynaptic (Ruiz et al. 2003) ionotropic type A GABA receptors (GABAARs).
+ and presynaptic ionotropic type A GABA receptors (GABAARs).
+ 
+ 
+**From Kao et al 2004, Yang and Yazulla, 1994**
+
+- displayed evidence that certain neurons in retina in different organisms use both glutamate and GABA
+
+
+**From Walker et al 2001, Safiulina et al 2006**
+
+- hippocampal mossy ﬁbers uses both glutamate and GABA
