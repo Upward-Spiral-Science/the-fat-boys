@@ -47,6 +47,10 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Testing Assumptions
 
+#### Further Clustering
+
+#### Computer Vision and Colocalization Analysis
+
 #### Next Steps
 
 
