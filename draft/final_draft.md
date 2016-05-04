@@ -52,6 +52,7 @@ Next we want to see if each marker could be used to predict another marker. To d
 Given a chosen marker, rather than using all other markers as the features, we then proceed to only use a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
+We make several assumptions. First, we assumed that the brightness/location features across the 24 markers are identitically and independently distributed. To check independence, we compute the correlation matrix and we check that the off-diagonal entries are approximately 0. To check that the features are identically distributed, we check that the optimal number of clusters is approximately 1 under the Gaussian Mixture Model. 
 
 #### Further Clustering
 
