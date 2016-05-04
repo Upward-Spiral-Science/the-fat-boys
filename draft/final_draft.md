@@ -103,4 +103,4 @@ We test independence by inspecting the correlation matrix, and we test identitic
 
 
 #### Computer Vision and Colocalization Analysis
-Scree plots show the singular values of the Singular Value Decomposition of a matrix. We took the adjacency matrix of our graphs, and performed the SVD on them. The elbows were found using code provided by Youngser Park, an implementation of the Zhu Ghodsi method published in 2006.
+
