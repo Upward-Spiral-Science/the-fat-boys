@@ -104,11 +104,11 @@ The * indicates that these likelihoods are optimal. In our implementation we use
 Let y = 0 denote that a particular synapse is glutamatergic(high brightness of VGlut1) and y = 1 denote that a particular synapse is not glutamatergic(low brightness of VGlut1). This would serve as our labels for classification. We set the threshold to be the mean of the local brightness of VGlut1. For our null generative model that we sampled from, we assumed that all the features (local brightness of other markers) as well as the VGlut1 brightness that we were looking at were sampled from Gaussian distributions. Each feature was sampled independently from a Gaussian with a certain mean and variance. In our code below, we generated the mean and variance randomly. We further assumed that for each feature Xi∼N(μi,σ2i), for the labels Y∼N(μ,σ2), where each μi,σi are randomly sampled from a uniform distribution between 0 and 1. At the end of the day we sought to define a classifier S:X→Y such that the value ∑ni=1θ(S(Xi)≠Yi) is minimized where θ is the indicator function.
 
 The following were the calssifiers that we used ( listed with the associated parameters): 
-lda (linear discriminant analysis): no parameters
-qda (quadratic discriminant analysis): no parameters
-svm (support vector machine): penalty parameters set to 0.5 because it was a default suggested
-knn (k-nearest neighbours): number of neighbors set to 3 because it was a default suggested
-rf (random forest): same
+\nlda (linear discriminant analysis): no parameters
+\nqda (quadratic discriminant analysis): no parameters
+\nsvm (support vector machine): penalty parameters set to 0.5 because it was a default suggested
+\nknn (k-nearest neighbours): number of neighbors set to 3 because it was a default suggested
+\nrf (random forest): same
 
 
 #### Testing Assumptions
