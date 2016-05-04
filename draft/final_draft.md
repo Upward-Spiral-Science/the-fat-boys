@@ -99,6 +99,7 @@ Below outlines the performance of each of these classifiers tested on simulated 
 
 
 #### Testing Assumptions
+We test independence by inspecting the correlation matrix, and we test identitical distribution assumption by looking at the optimal number of clusters.
 
 
 #### Computer Vision and Colocalization Analysis
