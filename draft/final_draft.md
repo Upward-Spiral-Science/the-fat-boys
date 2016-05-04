@@ -96,6 +96,12 @@ The * indicates that these likelihoods are optimal. In our implementation we use
 
 #### Predictive Analysis
 
+The classification accuracy on real data based on the five tested classifiers around the low 80s. (quite high) The classification accuracy on our null model of independent Gaussian-distributed features is slightly better than chance at around the low 50s. This means that the features of true data is likely not independent and highly correlated. The marginal plots of the features does look bell-curve like though, so the gaussian assumption is not out of nowhere.
+Next, We need to test new assumptions and new distributions to sample from, most likely sampling from Gaussians that are correlated. Also, we can calculate means and stdevs fromt the real data, and then construct the parametric gaussian model based on those values to see if we can get a better null distribution.
+
+Next we want to see if each marker could be used to predict another marker. To do so for any arbitrary chosen marker, we employed all other markers as the features to build a classifier for the chosen feature. To create labels for the chosen marker, we assign the expression instances into two groups through thresholding. Several types of classifiers were trained and tested using LOO cross-validation, and some results are shown in the figure below.
+
+Given a chosen marker, rather than using all other markers as the features, we then proceed to only use a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
 
