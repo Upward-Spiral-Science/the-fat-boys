@@ -41,6 +41,9 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Inferential Analysis
 
+From a biological perspective, the samples should cluster into at least 2 groups: inhibitory and excitiatory. However, this is not immediatly obvious from our exploratory analysis. Hence, we would like to use inferential analysis to determine how many sample clusters the dataset contains. Unfortunately, this is very difficult to do due to the high dimensionality of the set. Instead, we can check how many clusters the individual feature columns contain. This should hint at the number of cliusters across the whole dataset. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 4. For VGlut1 we achieved the following results:
+
+Clearly, for VGlut1, inference testing supports k > 1. For the feature columns we examined, our inference testing results support the existence of clusters within the data.
 
 #### Predictive Analysis
 
@@ -52,7 +55,6 @@ Next we want to see if each marker could be used to predict another marker. To d
 Given a chosen marker, rather than using all other markers as the features, we then proceed to only use a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
-We make several assumptions. First, we assumed that the brightness/location features across the 24 markers are identitically and independently distributed. To check independence, we compute the correlation matrix and we check that the off-diagonal entries are approximately 0. To check that the features are identically distributed, we check that the optimal number of clusters is approximately 1 under the Gaussian Mixture Model. 
 
 #### Further Clustering
 
