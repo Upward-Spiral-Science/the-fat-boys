@@ -94,6 +94,8 @@ The * indicates that these likelihoods are optimal. In our implementation we use
 
 
 #### Predictive Analysis
+As described in the previous section, we iteratively went through all markers and in each trial used all other markers as features to train a classifiers for the marker being iterated through. Some of the tests were non-parametric (LDA, QDA), while others are not(K-nearest neighbour, Linear SVM, and Random Forest). The parameters were used were recommended by the skylearn documentation, and we could customize them to obtain better results.
+Below outlines the performance of each of these classifiers tested on simulated data sampled from a Gaussian distribution.
 
 
 #### Testing Assumptions
