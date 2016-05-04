@@ -46,7 +46,8 @@ The natural first step when working with any data is to ask exploratory and desc
 
 
 #### Testing Assumptions
-
+State Assumptions: We assume that integrated brightness features of all 24 markers are sampled according to: $xi∼iidF$. This is both an independent and identical assumption.
+Check Assumptions: To check independence, check that off diagonal correlation is approximately 0. To check indenticality, check that the optimal number of clusters is approximately 1 under GMM model. We also plot the residuals under linear regression model just for fun.
 #### Further Clustering
 
 #### Computer Vision and Colocalization Analysis
