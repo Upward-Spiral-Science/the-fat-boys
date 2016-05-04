@@ -52,6 +52,7 @@ The natural first step when working with any data is to ask exploratory and desc
 #### Computer Vision and Colocalization Analysis
 
 #### Next Steps
+The conducted exploratory analysis has raised several new questions which will need to be addressed in future work. First, judging from the feature marginal distributions, it appears that over half of the synapses in the marker file are outliers. This stems from the fact that there are a large number of false positives in the original synapse detection algorithm which was run on the raw images. This means that any conclusions we draw from the primary marker file are immediately questionable, as the majority of robust methods only function when less than half the samples are outliers. We have attemtped to deal with this by log-normalizing the data before conducting any analysis. We have also implemented robust methods of estimating localtion and scatter and avoided using inferential tests which are sensitive to outliers. Nonetheless, this is likely a half measure. What needs to be done in future work is that the original images need to be re-analyzed for synapses via an algorithm that generates fewer false positives at the expense of more false negatives. Next, our work suggests that the synapses liekly do cluster, although we have been unable to find them due to the large quantity of outliers.
 
 ### Methods
 Each of the questions required code and (for the inferential, predictive, and assumption checking portions) mathematical theory. This is all explained in detail in each file, tabulated below. Here, we will discuss the methods used in each of these sections, rationalize decision made, and discuss alternatives that could have been performed instead.
@@ -94,13 +95,10 @@ The * indicates that these likelihoods are optimal. In our implementation we use
 
 
 #### Predictive Analysis
-As described in the previous section, we iteratively went through all markers and in each trial used all other markers as features to train a classifiers for the marker being iterated through. Some of the tests were non-parametric (LDA, QDA), while others are not(K-nearest neighbour, Linear SVM, and Random Forest). The parameters were used were recommended by the skylearn documentation, and we could customize them to obtain better results.
-Below outlines the performance of each of these classifiers tested on simulated data sampled from a Gaussian distribution.
 
 
 #### Testing Assumptions
-We test independence by inspecting the correlation matrix, and we test identitical distribution assumption by looking at the optimal number of clusters.
 
 
 #### Computer Vision and Colocalization Analysis
-
+Scree plots show the singular values of the Singular Value Decomposition of a matrix. We took the adjacency matrix of our graphs, and performed the SVD on them. The elbows were found using code provided by Youngser Park, an implementation of the Zhu Ghodsi method published in 2006.
