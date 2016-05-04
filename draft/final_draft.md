@@ -53,14 +53,6 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Next Steps
 
-
-
-
-
-#### Computer Vision and Colocalization Analysis
-
-
-
 ### Methods
 Each of the questions required code and (for the inferential, predictive, and assumption checking portions) mathematical theory. This is all explained in detail in each file, tabulated below. Here, we will discuss the methods used in each of these sections, rationalize decision made, and discuss alternatives that could have been performed instead.
 
