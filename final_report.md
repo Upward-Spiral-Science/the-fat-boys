@@ -12,7 +12,7 @@ May 4th, 2016
   - [Inferential Analysis](./final_report.md#inferential-analysis)
   - [Predictive Analysis](./final_report.md#predictive-analysis)
   - [Testing Assumptions](./final_report.md#testing-assumptions)
-  - [Further Clustering](./final_report.md#clustering)
+  - [Further Exploration and Clustering](./final_report.md#clustering)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis)
 - [Methods](./final_report.md#methods)
   - [Descriptive Analysis](./final_report.md#descriptive-analysis-1)
@@ -20,7 +20,7 @@ May 4th, 2016
   - [Inferential Analysis](./final_report.md#inferential-analysis-1)
   - [Predictive Analysis](./final_report.md#predictive-analysis-1)
   - [Testing Assumptions](./final_report.md#testing-assumptions-1)
-  - [Further Clustering](./final_report.md#clustering-1)
+  - [Further Exploration and Clustering](./final_report.md#clustering-1)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis-1)
 
 ----------
@@ -85,20 +85,28 @@ Given a chosen marker, rather than using all other markers as the features, we t
 #### Testing Assumptions
 We make the assumption that the data is independent and identically distributed (i.i.d.) 
 
-To test for independence, we look at the correlation matrices for each feature across all the excitatory and inhibitory markers. If the data is indeed independent, then we should expect to see off diagonal terms in the correlation matrices to be close to 0. On the other hand, if the data is not independent, then we would expect to see significant deviations from 0 on the off-diagonal terms in the correlation matrices. 
+To test for independence, we look at the correlation matrices for each feature across all the excitatory and inhibitory markers. If the data is indeed independent, then we should expect to see off diagonal terms in the correlation matrices to be close to 0. On the other hand, if the data is not independent, then we would expect to see significant deviations from 0 on the off-diagonal terms in the correlation matrices. We can see from the correlation matrices below that there are significant non-zero terms in the off-diagonal entries. Hence, we cannot conclude that the data is independent. 
 
 
 ![Integrated](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Integrated.png)
 ![Local](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Local.png)
 ![Center](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Center.png)
 ![Moment](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Moment.png)
-To test for identical distribution, we assumed that the data is sampled from a Gaussian Mixture Model. We test for the optimal number of components under the GMM. We make a plot of Bayesian Information Criterior (BIC) vs number of components in the GMM. If the data is identically distributed, the optimal number of component should be very close to 1. 
-#### Further Clustering 
+
+To test for identical distribution, we assumed that the data is sampled from a Gaussian Mixture Model. We test for the optimal number of components under the GMM. We make a plot of Bayesian Information Criterior (BIC) vs number of components in the GMM. If the data is identically distributed, the optimal number of component should be very close to 1. However, what we observe is that our data has optimal number of components very close to around 2-3. Hence, we cannot conclude that the data is identically distributed. 
+
+![Identical](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Identical.png)
+
+#### Further Exploration and Clustering
 
 ![MarginalsSynapsin](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginal.png)
+
 ![MarginalsSynapsinPostrm](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginalPostrm.png)
+
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
+
+![Dendrogram](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Dendrogram.png)
 
 
 #### Computer Vision and Colocalization Analysis
@@ -185,6 +193,9 @@ random forest.
 
 
 #### Testing Assumptions
+
+
+#### Further Exploration and Clustering
 
 
 
