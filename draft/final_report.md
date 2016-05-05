@@ -72,10 +72,10 @@ Each of the questions required code and (for the inferential, predictive, and as
 
 | Question Type | Code |
 |---------------|------|
-| Descriptive | [**``./draft/Assignment3_Abridged.ipynb)``**](./draft/Assignment3_Abridged.ipynb) |
-| Exploratory | [**``./draft/Assignment3_Abridged.ipynb)``**](./draft/Assignment3_Abridged.ipynb) |
-| Inferential | [**``./code/inferential_simulation.ipynb``**](./code/inferential_simulation.ipynb) |
-| Predictive  | [**``./code/classification_simulation.ipynb``**](./code/classification_simulation.ipynb) |
+| Descriptive | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
+| Exploratory | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
+| Inferential | [**``./Assignment4.ipynb``**](./Assignment4.ipynb) |
+| Predictive  | [**``./Assignment5_Classification_FatBoys.ipynb``**](./Assignment5_Classification_FatBoys.ipynb) |
 | Testing Assumptions | [**``./code/test_assumptions.ipynb``**](./code/test_assumptions.ipynb) |
 | Extended Exploratory | [**``code/extended_exploratory.ipynb``**](code/extended_exploratory.ipynb),  [**``./code/extended_exploratory-on-new-datasets.ipynb``**](./code/extended_exploratory-on-new-datasets.ipynb) |
 | Sample Distributions | [**``./code/multiple_distributions.ipynb``**](./code/multiple_distributions.ipynb) |
