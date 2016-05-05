@@ -218,7 +218,7 @@ random forest.
 
 
 #### Testing Assumptions
-We computed the correlation on log-normalized features across different excitatory and inhibitory markers. We observe 
+We computed the correlation on log-normalized features across different excitatory and inhibitory markers. We observe look at the off-diagonal values of the correlation matrix. We assumed data sampled from a GMM with n components compute BIC for number of components ranging from 1 to 10.
 
 #### Further Exploration and Clustering
 
