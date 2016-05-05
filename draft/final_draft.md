@@ -37,7 +37,7 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
-![Correlation](the-fat-boys/figs/FinalReport/Correlation.png)
+![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
 
 #### Inferential Analysis
 
