@@ -210,3 +210,5 @@ We investigated how well a set of peaks on the raw images of a marker colocalize
 We first picked out the hospots for the GABAR-1 markers, and found the spatial correlation between these hotspots with those on the images for all other markers based on a 1-neareast neighbor test. Then we performed the same procedure for the hostpots of all other images and constructed the correspdoning correlation heatmap. 
 
 In addition, we wanted to know, for a given hotspot on the raw images of channel A, the distribution of the neighboring hotspots on the images of other channels. For each stack of images we applied a hard threshold and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 1.5 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
+
+* We also tried out other methods for denoising the image, such as unsharp masking, de-convolution, and a series of edge-based threshold filtering. The results produced from those methods were not so informative and thus were not included in the final report
