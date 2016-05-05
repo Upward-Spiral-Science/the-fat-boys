@@ -111,8 +111,14 @@ To test for identical distribution, we assumed that the data is sampled from a G
 
 #### Further Exploration and Clustering
 
+
+To further explore our data, we divided the synapses into two classes, inhibitory and excitatory, by applying a threshold on their VGlut1 expression. We log-normalized our data and filtered out synapses with high DAPI or low tubulin expression. 
+
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
+After filtering and thresholding, we project the data onto a low dimensional space and performed K-means clustering. As we can see, the clustering algorithm did a terrific job separating the two groups. 
+
+We also tried performing hierarchical clustering on the correlation matrix of integrated brightness. The results are shown in the dendrogram below. While we have to be cautious in interpreting the results, we observe that markers that can be broadly classified as inhibitory/excitatory seem to cluster/correlate well with each other. 
 
 ![Dendrogram](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Dendrogram.png)
 
