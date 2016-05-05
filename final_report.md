@@ -123,7 +123,12 @@ We directly plotted the median minimal distance between a hotspot on the raw ima
 
  
 ![ColocviaAll](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColocwDAPI.png)
+
+We performed the analysis on median minimal distance between the hotspots on the images of different markers on all makers. The correaltion matrix plot above showed the result. The hot spots from DAPI, a marker for nucleus DNA, had the largest distance from the hot spots from all other markers. This is expected as DAPI should not have high expression level in the synapses. 
+
 ![ColocDAPI](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColoc.png)
+
+We took out DAPI and performed the same analysis again. Beside the diagonals, we are seeing that the median distance between a hotspot on GABAR and a hotspot on Glur-2 is relatively small. This is intersting becase Glur-2 is a excitatory synapse marker while GABAR-1 is an inhibitory synapse marker. 
 
 ![Distirbution] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/gaba_neighbor.png)
 
