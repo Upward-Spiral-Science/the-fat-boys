@@ -118,14 +118,14 @@ Each of the questions required code and (for the inferential, predictive, and as
 
 | Question Type | Code |
 |---------------|------|
-| Descriptive | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
-| Exploratory | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
-| Inferential | [**``./Assignment4.ipynb``**](./Assignment4.ipynb) |
-| Predictive  | [**``./Assignment5_Classification_FatBoys.ipynb``**](./Assignment5_Classification_FatBoys.ipynb) |
-| Testing Assumptions | [**``./Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./Assignment6_Checking_Assumptions_Fatboys.ipynb) |
-| Further Clustering | [**``./Ivan_Report.ipynb``**](./Ivan_Report.ipynb) |
-| Previous Work and Literature Search| [**``../Edric-Report-LiteratureSearch.md``**](../Edric-Report-LiteratureSearch.md)|
-| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m),[**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb) |
+| Descriptive | [**``./draft/Assignment3_Abridged.ipynb``**](./draft/Assignment3_Abridged.ipynb) |
+| Exploratory | [**``./draft/Assignment3_Abridged.ipynb``**](./draft/Assignment3_Abridged.ipynb) |
+| Inferential | [**``./draft/Assignment4.ipynb``**](./draft/Assignment4.ipynb) |
+| Predictive  | [**``./draft/Assignment5_Classification_FatBoys.ipynb``**](./draft/Assignment5_Classification_FatBoys.ipynb) |
+| Testing Assumptions | [**``./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb) |
+| Further Clustering | [**``./draft/Ivan_Report.ipynb``**](./draft/Ivan_Report.ipynb) |
+| Previous Work and Literature Search| [**``./Edric-Report-LiteratureSearch.md``**](./Edric-Report-LiteratureSearch.md)|
+| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./draft/IvanReport_4_27.ipynb``**](./draft/IvanReport_4_27.ipynb) |
 
 #### Descriptive Analysis
 Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
