@@ -68,7 +68,7 @@ Given a chosen marker, rather than using all other markers as the features, we t
 ![MarginalswLog]()
 ![MarginalsSynapsin]()
 ![MarginalsSynapsinPostrm]()
-[!PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
+![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
 
 
