@@ -114,7 +114,14 @@ To test for identical distribution, we assumed that the data is sampled from a G
 #### Computer Vision and Colocalization Analysis
 
 ![ColocviaCorr](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ColocGABABviaCorr.png)
+
+We wanted to look at the Pearson correlation between the hotspots from raw images of different markers. As seen from the above graphs, hotspots from GABAR correlated perfectly with itself (as a sanity check), followed by GABAR-1 and Vglut-1. We were confused to see that Vlug-1 correlated the second best with Vglut-1 because the former is a inhibitory synapse marker, and the later is a excitatory synapse marker. 
+
 ![ColocviaMed](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/ColocGABABviaMedian.png)
+
+We directly plotted the median minimal distance between a hotspot on the raw images for GABAR and the corresponding a correpsonding hotspot on the raw images for other markers. This plot confirmed the trend that GABAR correlated really well with the Vlut markers compared to other markers. 
+
+ 
 ![ColocviaAll](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColocwDAPI.png)
 ![ColocDAPI](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColoc.png)
 
