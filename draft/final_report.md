@@ -15,7 +15,7 @@ May 4th, 2016
   - [Further Clustering](./final_report.md#clustering)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis)
 - [Methods](./final_report.md#methods)
-  - [Decriptive Analysis](./final_report.md#descriptive-analysis-1)
+  - [Descriptive Analysis](./final_report.md#descriptive-analysis-1)
   - [Exploratory Analysis](./final_report.md#exploratory-analysis-1)
   - [Inferential Analysis](./final_report.md#inferential-analysis-1)
   - [Predictive Analysis](./final_report.md#predictive-analysis-1)
