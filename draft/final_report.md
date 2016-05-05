@@ -72,8 +72,8 @@ Each of the questions required code and (for the inferential, predictive, and as
 
 | Question Type | Code |
 |---------------|------|
-| Descriptive | [**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/descriptive_and_exploratory_answers.ipynb) |
-| Exploratory | [**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/descriptive_and_exploratory_answers.ipynb) |
+| Descriptive | [**``./draft/Assignment3_Abridged.ipynb)``**](./draft/Assignment3_Abridged.ipynb) |
+| Exploratory | [**``./draft/Assignment3_Abridged.ipynb)``**](./draft/Assignment3_Abridged.ipynb) |
 | Inferential | [**``./code/inferential_simulation.ipynb``**](./code/inferential_simulation.ipynb) |
 | Predictive  | [**``./code/classification_simulation.ipynb``**](./code/classification_simulation.ipynb) |
 | Testing Assumptions | [**``./code/test_assumptions.ipynb``**](./code/test_assumptions.ipynb) |
