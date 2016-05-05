@@ -37,6 +37,7 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
+![Marginals]()
 ![PCA](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/PCA.png)
 ![Scree](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Scree.png)
 ![tSNE](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/tSNE_LogNormalized.png)
@@ -63,6 +64,13 @@ Given a chosen marker, rather than using all other markers as the features, we t
 #### Testing Assumptions
 
 #### Further Clustering
+
+![MarginalswLog]()
+![MarginalsSynapsin]()
+![MarginalsSynapsinPostrm]()
+[!PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
+
+
 
 #### Computer Vision and Colocalization Analysis
 
