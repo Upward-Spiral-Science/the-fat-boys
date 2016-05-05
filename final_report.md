@@ -205,5 +205,8 @@ We computed the correlation on log-normalized features across different excitato
 
 
 #### Computer Vision and Colocalization Analysis
+We investigated how well a set of peaks on the raw images of a marker colocalized with another set of peaks on the raw images of another marker. To accomplish this, we first subsampled on the images to find a section of the images to anlyze, denoise the images through applying a hard threshold and non-max supression, and finally recorded the peak locations. 
+
+We first picked out the hospots for the GABAR-1 markers, and found the spatial correlation between these hotspots with those on the images for all other markers based on a 1-neareast neighbor test. Then we performed the same procedure for the hostpots of all other images and constructed the correspdoning correlation heatmap. 
 
 For each stack of images we applied a hard threshold and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 1.5 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
