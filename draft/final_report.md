@@ -124,6 +124,7 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Predictive  | [**``./Assignment5_Classification_FatBoys.ipynb``**](./Assignment5_Classification_FatBoys.ipynb) |
 | Testing Assumptions | [**``./Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./Assignment6_Checking_Assumptions_Fatboys.ipynb) |
 | Further Clustering | [**``./Ivan_Report.ipynb``**](./Ivan_Report.ipynb) |
+| Previous Work and Literature Search| [**``../Edric-Report-LiteratureSearch.md``**](../Edric-Report-LiteratureSearch.md)|
 | Computer Vision and Colocalization Analysis | [**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb),[**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m) |
 
 #### Descriptive Analysis
