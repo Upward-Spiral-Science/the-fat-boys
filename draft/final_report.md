@@ -40,6 +40,7 @@ The natural first step when working with any data is to ask exploratory and desc
 ![Marginals]()
 ![PCA](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/PCA.png)
 ![Scree](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Scree.png)
+![MarginalswLog]()
 ![tSNE](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/tSNE_LogNormalized.png)
 ![BIC](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/BIC.png)
 ![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
@@ -65,7 +66,6 @@ Given a chosen marker, rather than using all other markers as the features, we t
 
 #### Further Clustering
 
-![MarginalswLog]()
 ![MarginalsSynapsin]()
 ![MarginalsSynapsinPostrm]()
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
