@@ -108,10 +108,6 @@ To test for identical distribution, we assumed that the data is sampled from a G
 
 #### Further Exploration and Clustering
 
-![MarginalsSynapsin](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginal.png)
-
-![MarginalsSynapsinPostrm](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginalPostrm.png)
-
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
 
