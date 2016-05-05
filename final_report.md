@@ -161,7 +161,7 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Testing Assumptions | [**``./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb) |
 | Further Clustering | [**``./draft/Ivan_Report.ipynb``**](./draft/Ivan_Report.ipynb) |
 | Previous Work and Literature Search| [**``./Edric-Report-LiteratureSearch.md``**](./Edric-Report-LiteratureSearch.md)|
-| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./draft/IvanReport_4_27.ipynb``**](./draft/IvanReport_4_27.ipynb), [**``./draft/khuang28_4_30_Hotspots_Identificaiton``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_30_Hotspots_Identificaiton.m),[**``./draft/khuang28visualization043016.pdf``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28visualization043016.pdf) |
+| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./draft/IvanReport_4_27.ipynb``**](./draft/IvanReport_4_27.ipynb), [**``./draft/khuang28_4_30_Hotspots_Identificaiton``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_30_Hotspots_Identificaiton.m),[**``./draft/khuang28visualization043016.pdf``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28visualization043016.pdf) | [**``./draft/khuang28hotspotcv_4_28**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_20_Hotspots_Identificaiton.m)
 
 
 #### Descriptive Analysis
