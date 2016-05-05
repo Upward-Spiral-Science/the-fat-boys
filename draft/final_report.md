@@ -164,4 +164,8 @@ The following were the calssifiers that we used ( listed with the associated par
 
 #### Computer Vision and Colocalization Analysis
 
-In addition, we wanted to know, for a given hotspot on the raw images of channel A, the distribution of the neighboring hotspots on the images of other channels.For each stack of images we first subsampled a section to analyze, applied a hard threshold based on the means of the intensity, and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 2 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
+We investigated how well a set of peaks on the raw images of a marker colocalized with another set of peaks on the raw images of another marker. To accomplish this, we first subsampled on the images to find a section of the images to anlyze, denoise the images through applying a hard threshold and non-max supression, and finally recorded the peak locations. 
+
+We first picked out the hospots for the GABAR-1 markers, and 
+
+In addition, we wanted to know, for a given hotspot on the raw images of channel A, the distribution of the neighboring hotspots on the images of other channels. For each stack of images we again first subsampled a section to analyze, applied a hard threshold based on the means of the intensity, and then identified the hospots after performing non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 2 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
