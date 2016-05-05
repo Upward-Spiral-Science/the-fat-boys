@@ -76,10 +76,9 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Exploratory | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
 | Inferential | [**``./Assignment4.ipynb``**](./Assignment4.ipynb) |
 | Predictive  | [**``./Assignment5_Classification_FatBoys.ipynb``**](./Assignment5_Classification_FatBoys.ipynb) |
-| Testing Assumptions | [**``./code/test_assumptions.ipynb``**](./code/test_assumptions.ipynb) |
-| Extended Exploratory | [**``code/extended_exploratory.ipynb``**](code/extended_exploratory.ipynb),  [**``./code/extended_exploratory-on-new-datasets.ipynb``**](./code/extended_exploratory-on-new-datasets.ipynb) |
-| Sample Distributions | [**``./code/multiple_distributions.ipynb``**](./code/multiple_distributions.ipynb) |
-| Dimensionality Reduction | [**``./code/scree_plots.md``**](./code/scree_plots.md), [**``./code/multipanel_scree_plots.md``**](./code/multipanel_scree_plots.md) |
+| Testing Assumptions | [**``./Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./Assignment6_Checking_Assumptions_Fatboys.ipynb) |
+| Further Clustering | [**``./Ivan_Report.ipynb``**](./Ivan_Report.ipynb) |
+| Computer Vision and Colocalization Analysis | [**``./code/multiple_distributions.ipynb``**](./code/multiple_distributions.ipynb) |
 
 #### Descriptive Analysis
 Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
