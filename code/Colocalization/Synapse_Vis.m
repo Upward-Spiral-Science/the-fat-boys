@@ -202,3 +202,15 @@ for i = 1:size(imageStack,3)
 end
 
 drawnow;
+%%
+[~,I] = sort(dist_median_res);
+rowI = I(2,:);
+[~,I] = sort(dist_median_res');
+colI = I(2,:);
+eq = rowI == colI;
+names = {'Synap_1,'	'Synap_2,'	'VGlut1_1,'	'VGlut1_2,'	'VGlut2,'	'VGlut3,'	'PSD,'	'Glur2,'...
+    'NMDAR,'	'NR2B,'	'GAD,'	'VGat,'	'PV,'	'Gephryn,'	'GABAR,'	'GABABR,'	'CR1,'	'5HT1A,'	'NOS,'	'TH,'...
+    'VAChT,'	'Synpod,'	'Tubulin,'	'DAPI'};
+
+[names{eq}]
+
