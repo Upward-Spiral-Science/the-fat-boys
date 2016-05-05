@@ -156,7 +156,9 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Testing Assumptions | [**``./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb) |
 | Further Clustering | [**``./draft/Ivan_Report.ipynb``**](./draft/Ivan_Report.ipynb) |
 | Previous Work and Literature Search| [**``./Edric-Report-LiteratureSearch.md``**](./Edric-Report-LiteratureSearch.md)|
-| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./draft/IvanReport_4_27.ipynb``**](./draft/IvanReport_4_27.ipynb), [**``./draft/khuang28_4_30_Hotspots_Identificaiton``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_30_Hotspots_Identificaiton.m)
+| Computer Vision and Colocalization Analysis |
+[**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./draft/IvanReport_4_27.ipynb``**](./draft/IvanReport_4_27.ipynb), [**``./draft/khuang28_4_30_Hotspots_Identificaiton``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_30_Hotspots_Identificaiton.m),[**``./draft/khuang28visualization043016.pdf``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28visualization043016.pdf)
+
 
 #### Descriptive Analysis
 Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
