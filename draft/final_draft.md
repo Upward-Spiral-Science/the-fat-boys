@@ -7,11 +7,12 @@ May 4th, 2016
 **Table of Contents:**
 - [Overview](./final_report.md#overview)
 - [Scientific Questioning](./final_report.md#scientific-questioning)
-  - [Decriptive Analysis](./final_report.md#descriptive-analysis)
+  - [Descriptive Analysis](./final_report.md#descriptive-analysis)
   - [Exploratory Analysis](./final_report.md#exploratory-analysis)
   - [Inferential Analysis](./final_report.md#inferential-analysis)
   - [Predictive Analysis](./final_report.md#predictive-analysis)
   - [Testing Assumptions](./final_report.md#testing-assumptions)
+  - [Further Clustering](./final_report.md#clustering)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis)
 - [Methods](./final_report.md#methods)
   - [Decriptive Analysis](./final_report.md#descriptive-analysis-1)
@@ -19,6 +20,7 @@ May 4th, 2016
   - [Inferential Analysis](./final_report.md#inferential-analysis-1)
   - [Predictive Analysis](./final_report.md#predictive-analysis-1)
   - [Testing Assumptions](./final_report.md#testing-assumptions-1)
+  - [Further Clustering](./final_report.md#clustering-1)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis-1)
 
 ----------
@@ -35,25 +37,30 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
-
-
 #### Inferential Analysis
+
+We are now primed to further search our datasets for clusters. We proceeded by using inference analysis to determine how many clusters individual feature columns contained. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 4. For VGlut1 we achieved the following results:
+
+Clearly, for VGlut1, inference testing supports k > 1. For the feature columns we examined, our inference testing results support the existence of clusters within the data.
 
 
 #### Predictive Analysis
 
+The classification accuracy on real data was based on the five tested classifiers around the low 80s. The classification accuracy on our null model of independent Gaussian-distributed features was slightly better than chance at around the low 50s. This means that the features of true data was likely not independent and highly correlated. The marginal plots of the features did look bell-curve like though, so the gaussian assumption was not out of nowhere.
+Next, We need to test new assumptions and generate new distributions to sample from; we would most likely sample from Gaussians that are correlated. Also, we can calculate means and standard deviation from the real data, and then construct the parametric gaussian model based on those values to see if we can get a better null distribution.
+
+Furthermore we want to see if each marker could be used to predict another marker. To do so for any arbitrary chosen marker, we employed all other markers as the features to build a classifier for the chosen feature. To create labels for the chosen marker, we assigned the expression instances into two groups through thresholding. Several types of classifiers were trained and tested using LOO cross-validation, and some results are shown in the figure below.
+
+Given a chosen marker, rather than using all other markers as the features, we then only used a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
 
-#### Next Steps
-
-
-
-
+#### Further Clustering
 
 #### Computer Vision and Colocalization Analysis
 
-
+#### Next Steps
+The conducted exploratory analysis has raised several new questions which will need to be addressed in future work. First, judging from the feature marginal distributions, it appears that over half of the synapses in the marker file are outliers. This stems from the fact that there are a large number of false positives in the original synapse detection algorithm which was run on the raw images. This means that any conclusions we draw from the primary marker file are immediately questionable, as the majority of robust methods only function when less than half the samples are outliers. We have attemtped to deal with this by log-normalizing the data before conducting any analysis. We have also implemented robust methods of estimating localtion and scatter and avoided using inferential tests which are sensitive to outliers. Nonetheless, this is likely a half measure. What needs to be done in future work is that the original images need to be re-analyzed for synapses via an algorithm that generates fewer false positives at the expense of more false negatives. Next, our work suggests that the synapses likely do cluster, although we have been unable to find them due to the large quantity of outliers. Our work needs to be redone once a dataset with less outliers is generated. Finally, our work shows that markers which we explect to colocalize and cluster strongly with other markers do not necessarily do so. For example, the GABAB receptor, which is conventionally considered an inhibitory marker, seems to colocalize strongly with the excitatory markers. Similarly, Gephyr seems to colocalize strongly will all of the markers, something which cannot easily be explained. Additionally, VGlut2 and Glur2 colocalize extremely strongly. As far as we know, none of these phenomena have been describe din the literature and, if they are correct, they are incredibly important to the field of neuroscience. Undoubtedly, there are even more discoveries to be made from this dataset.
 
 ### Methods
 Each of the questions required code and (for the inferential, predictive, and assumption checking portions) mathematical theory. This is all explained in detail in each file, tabulated below. Here, we will discuss the methods used in each of these sections, rationalize decision made, and discuss alternatives that could have been performed instead.
@@ -96,6 +103,9 @@ The * indicates that these likelihoods are optimal. In our implementation we use
 
 
 #### Predictive Analysis
+Let y = 0 denote that a particular synapse is glutamatergic(high brightness of VGlut1) and y = 1 denote that a particular synapse is not glutamatergic(low brightness of VGlut1). This would serve as our labels for classification. We set the threshold to be the mean of the local brightness of VGlut1. For our null generative model that we sampled from, we assumed that all the features (local brightness of other markers) as well as the VGlut1 brightness that we were looking at were sampled from Gaussian distributions. Each feature was sampled independently from a Gaussian with a certain mean and variance. In our code below, we generated the mean and variance randomly. We further assumed that for each feature Xi∼N(μi,σ2i), for the labels Y∼N(μ,σ2), where each μi,σi are randomly sampled from a uniform distribution between 0 and 1. At the end of the day we sought to define a classifier S:X→Y such that the value ∑ni=1θ(S(Xi)≠Yi) is minimized where θ is the indicator function.
+
+The following were the calssifiers that we used ( listed with the associated parameters): linear discriminant analysis with no parameters, quadratic discriminant analysis with no parameters, support vector machine with penalty parameters set to 0.5 , k-nearest neighbours with number of neighbors set to 3, and random forest.
 
 
 #### Testing Assumptions
@@ -103,3 +113,5 @@ The * indicates that these likelihoods are optimal. In our implementation we use
 
 #### Computer Vision and Colocalization Analysis
 Scree plots show the singular values of the Singular Value Decomposition of a matrix. We took the adjacency matrix of our graphs, and performed the SVD on them. The elbows were found using code provided by Youngser Park, an implementation of the Zhu Ghodsi method published in 2006.
+
+For each stack of images we applied a hard threshold and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 1.5 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
