@@ -193,7 +193,7 @@ random forest.
 
 
 #### Testing Assumptions
-
+We computed the correlation on log-normalized features across different excitatory and inhibitory markers. 
 
 #### Further Exploration and Clustering
 
