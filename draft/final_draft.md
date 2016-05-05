@@ -37,6 +37,8 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
+![Correlation](the-fat-boys/figs/FinalReport/Correlation.png)
+
 #### Inferential Analysis
 
 We are now primed to further search our datasets for clusters. We proceeded by using inference analysis to determine how many clusters individual feature columns contained. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 4. For VGlut1 we achieved the following results:
