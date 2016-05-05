@@ -83,12 +83,17 @@ Furthermore we want to see if each marker could be used to predict another marke
 Given a chosen marker, rather than using all other markers as the features, we then only used a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
+We make the assumption that the data is independent and identically distributed (i.i.d.) 
+
+To test for independence, we look at the correlation matrices for each feature across all the excitatory and inhibitory markers. If the data is indeed independent, then we should expect to see off diagonal terms in the correlation matrices to be close to 0. On the other hand, if the data is not independent, then we would expect to see significant deviations from 0 on the off-diagonal terms in the correlation matrices. 
+
+
 ![Integrated](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Integrated.png)
 ![Local](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Local.png)
 ![Center](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Center.png)
 ![Moment](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Moment.png)
-
-#### Further Clustering
+To test for identical distribution, we assumed that the data is sampled from a Gaussian Mixture Model. We test for the optimal number of components under the GMM. We make a plot of Bayesian Information Criterior (BIC) vs number of components in the GMM. If the data is identically distributed, the optimal number of component should be very close to 1. 
+#### Further Clustering 
 
 ![MarginalsSynapsin](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginal.png)
 ![MarginalsSynapsinPostrm](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginalPostrm.png)
