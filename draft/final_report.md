@@ -62,7 +62,7 @@ Given a chosen marker, rather than using all other markers as the features, we t
 
 #### Testing Assumptions
 
-We want to test the assumption that the data are independently and identically distributed. To test independence, we plot correlation matrices of each of the 4 features across all 24 markers. If the data is independent, then we would expect off-diagonal terms to be close to 0. On the other hand, if the data are not independent, off diagonal terms would be far away from 0. 
+We want to test the assumption that the data are independently and identically distributed. To test independence, we plot correlation matrices of each of the 4 features across all the markers that are either excitatory or inhibitory. If the data is independent, then we would expect off-diagonal terms to be close to 0. On the other hand, if the data are not independent, off diagonal terms would be far away from 0. 
 
 
 
