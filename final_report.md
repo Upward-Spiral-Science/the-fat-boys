@@ -132,8 +132,11 @@ Our data is off a relatively standard format, so the descriptive analysis was ra
 
 #### Exploratory Analysis
 We asked the following questions: 
+
 1) What are the mean and standard deviations of the individual feature columns in the dataset? 
+
 2) What are the marginal distributions of the features in the first dataset? 
+
 3) Which features have the greatest variability among the subjects? Which have the least?
 4) Does the data form any clear clusters?
 5) How many principal components are needed to describe the data well?
