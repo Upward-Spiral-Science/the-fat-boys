@@ -125,7 +125,7 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Testing Assumptions | [**``./Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./Assignment6_Checking_Assumptions_Fatboys.ipynb) |
 | Further Clustering | [**``./Ivan_Report.ipynb``**](./Ivan_Report.ipynb) |
 | Previous Work and Literature Search| [**``../Edric-Report-LiteratureSearch.md``**](../Edric-Report-LiteratureSearch.md)|
-| Computer Vision and Colocalization Analysis | [**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb),[**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m) |
+| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m),[**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb) |
 
 #### Descriptive Analysis
 Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
