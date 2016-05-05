@@ -164,4 +164,4 @@ The following were the calssifiers that we used ( listed with the associated par
 
 #### Computer Vision and Colocalization Analysis
 
-For each stack of images we applied a hard threshold and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 1.5 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
+In addition, we wanted to know, for a given hotspot on the raw images of channel A, the distribution of the neighboring hotspots on the images of other channels.For each stack of images we first subsampled a section to analyze, applied a hard threshold based on the means of the intensity, and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 2 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
