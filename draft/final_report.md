@@ -12,6 +12,7 @@ May 4th, 2016
   - [Inferential Analysis](./final_report.md#inferential-analysis)
   - [Predictive Analysis](./final_report.md#predictive-analysis)
   - [Testing Assumptions](./final_report.md#testing-assumptions)
+  - [Further Clustering](./final_report.md#clustering)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis)
 - [Methods](./final_report.md#methods)
   - [Descriptive Analysis](./final_report.md#descriptive-analysis-1)
@@ -19,6 +20,7 @@ May 4th, 2016
   - [Inferential Analysis](./final_report.md#inferential-analysis-1)
   - [Predictive Analysis](./final_report.md#predictive-analysis-1)
   - [Testing Assumptions](./final_report.md#testing-assumptions-1)
+  - [Further Clustering](./final_report.md#clustering-1)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis-1)
 
 ----------
@@ -35,12 +37,32 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
+We are now ready to begin exploring the dataset. For now, we focus only on the large CSV file we were given. We will worry about the raw images later. We first normalize our data by converting to z-scores. Then we check the Feature Marginals. See the figure below.
+
 ![Marginals](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Marginals.png)
+
+This looks interesting. Apparently all the distributions are right-skewed and unimodal. THis is hardly what we would expect, given the fact that we know that there ae excitatory and inhibitory populations of neurons. Rather, w ewould expect at th every least bimodal distributions for the markers wich correspond to excitatory/inhibitory synapses. Even more interesting is the fact that the synapsin marginal has a high peak for low values and then has few sampels at high values.  THis is the opposite of what we would expect, as we know that synapses should have high synapsin fluorescence. This appears to be indicative of the fact that there a lot of outliers in our dataset which are not synapses. This is actually not too surprising, as the computer vision algorithm used to determine what bright patches in the raw images were synapses generates a huge number of false positives. Just for the sake of curiosity, let us look at what the data looks like via two-dimensional PCA embedding:
+
 ![PCA](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/PCA.png)
+
+And lets also look at the scree plot:
+
 ![Scree](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Scree.png)
+
+The PCA result does not reveal any obvious clusters, but this is hardly surprising given the huge number of outliers, which will negatively affect PCA. Also, as indicated by the scree plot, the PCA plot only retains 12% of th original data variance. Hence, the data does not appear to be well contained in a lower dimension subspace. None of these htigns are good news. What is clear, however, is that we need to find a way to deal with the outlier values. A good way of doing this is by taking the logarithm of the normalized data. Hence, outleirs will be "conmpressed" to be closer to the rest of the data. Below we show the marginals after Log scaling:
+
 ![MarginalswLog](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MarginalsafterLog.png)
+
+And now we should the log-normalzied data embedded into two-dimensions via tSNE.
+
 ![tSNE](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/tSNE_LogNormalized.png)
+
+Unfortunately, this still does not suggest any obvious clusters. Maybe Bayesian Information Criterion (BIC) will be more optimistic in reagrds to presence of clusters. See the BIC figure below for various constraints on the covariance matrix.
+
 ![BIC](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/BIC.png)
+
+Indeed, BIC suggests between 5-10 clusters within the data. 
+
 ![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
 ![Covariance](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Covariance.png)
 
@@ -61,10 +83,6 @@ Furthermore we want to see if each marker could be used to predict another marke
 Given a chosen marker, rather than using all other markers as the features, we then only used a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
-
-We want to test the assumption that the data are independently and identically distributed. To test independence, we plot correlation matrices of each of the 4 features across all the markers that are either excitatory or inhibitory. If the data is independent, then we would expect off-diagonal terms to be close to 0. On the other hand, if the data are not independent, off diagonal terms would be far away from 0. 
-
-
 
 #### Further Clustering
 
