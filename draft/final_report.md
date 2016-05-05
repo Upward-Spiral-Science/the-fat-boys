@@ -15,7 +15,7 @@ May 4th, 2016
   - [Further Clustering](./final_report.md#clustering)
   - [Computer Vision and Colocalization Analysis](./final_report.md#computer-vision-and-colocalization-analysis)
 - [Methods](./final_report.md#methods)
-  - [Decriptive Analysis](./final_report.md#descriptive-analysis-1)
+  - [Descriptive Analysis](./final_report.md#descriptive-analysis-1)
   - [Exploratory Analysis](./final_report.md#exploratory-analysis-1)
   - [Inferential Analysis](./final_report.md#inferential-analysis-1)
   - [Predictive Analysis](./final_report.md#predictive-analysis-1)
@@ -36,6 +36,11 @@ Here we will discuss our analysis of this data, starting with exploratory and de
 The natural first step when working with any data is to ask exploratory and descriptive questions about it. We have access to the KDM-SYN-100824B dataset, which is composed of 24 conjugate array tomography images of 41 brain slices from the mouse primary somatosensory cortex. Each conjugate array tomography image corresponds to a specific immunostain marker. Our collaborator has already pre-processed the images to generate two secondary sets, which we will call the “marker set” and the “pivot set.” We will primarily rely on these two sets throughout our analysis. The former set contains information about the intensity and distribution of the molecular markers within individual synapses seen in the KDM-SYN-100824B images. The latter set contains the x,y, and slice location of the relevant synapses within the former dataset. In order to determine the structure of our data, we first attempted to determine basic information: dataset size and number of invalid (i.e. Inf/Na/NaN) data points within the data. We found that the marker dataset has data for 1,119,299 subjects (synapses) and 144 features for each subject. Each 6 consecutive features, to our best guess, correspond to a single fluorescent marker, for a total of 144/6 = 24 markers. Upon further investigation, we found that only the first 4 of the 6 features for each marker were relevant for further analysis, so we discarded the last 2. Hence, our feature size was reduced to 4 * 24 = 96. The pivot dataset has data for the same 1,119,299 synapses and l 3 features. These 3 features, as stated above, correspond to the x-location, y-location, and slice number for the corresponding synapse in the conjugate array tomography images. There were no invalid data points within the secondary datasets. For the rest of our analysis, we will focus on the marker set.
 
 #### Exploratory Analysis
+
+![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
+![BIC](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/BIC.png)
+![Scree](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Scree.png)
+![tSNE](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/tSNE_LogNormalized.png)
 
 #### Inferential Analysis
 
@@ -67,14 +72,13 @@ Each of the questions required code and (for the inferential, predictive, and as
 
 | Question Type | Code |
 |---------------|------|
-| Descriptive | [**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/descriptive_and_exploratory_answers.ipynb) |
-| Exploratory | [**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/descriptive_and_exploratory_answers.ipynb) |
-| Inferential | [**``./code/inferential_simulation.ipynb``**](./code/inferential_simulation.ipynb) |
-| Predictive  | [**``./code/classification_simulation.ipynb``**](./code/classification_simulation.ipynb) |
-| Testing Assumptions | [**``./code/test_assumptions.ipynb``**](./code/test_assumptions.ipynb) |
-| Extended Exploratory | [**``code/extended_exploratory.ipynb``**](code/extended_exploratory.ipynb),  [**``./code/extended_exploratory-on-new-datasets.ipynb``**](./code/extended_exploratory-on-new-datasets.ipynb) |
-| Sample Distributions | [**``./code/multiple_distributions.ipynb``**](./code/multiple_distributions.ipynb) |
-| Dimensionality Reduction | [**``./code/scree_plots.md``**](./code/scree_plots.md), [**``./code/multipanel_scree_plots.md``**](./code/multipanel_scree_plots.md) |
+| Descriptive | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
+| Exploratory | [**``./Assignment3_Abridged.ipynb``**](./Assignment3_Abridged.ipynb) |
+| Inferential | [**``./Assignment4.ipynb``**](./Assignment4.ipynb) |
+| Predictive  | [**``./Assignment5_Classification_FatBoys.ipynb``**](./Assignment5_Classification_FatBoys.ipynb) |
+| Testing Assumptions | [**``./Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./Assignment6_Checking_Assumptions_Fatboys.ipynb) |
+| Further Clustering | [**``./Ivan_Report.ipynb``**](./Ivan_Report.ipynb) |
+| Computer Vision and Colocalization Analysis | [**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb),[**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m) |
 
 #### Descriptive Analysis
 Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
