@@ -1,6 +1,6 @@
 ### Synaptic Diversity
 ***The Fat Boys*** <br/>
-May 4th, 2016
+May 5th, 2016
 
 -------
 
@@ -153,7 +153,7 @@ Next, we also tried performing hierarchical clustering on the correlation matrix
 
 ![ColocviaCorr](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ColocGABABviaCorr.png)
 
-We wanted to look at the Pearson correlation between the hotspots from raw images of different markers. As seen from the above graphs, hotspots from GABAR correlated perfectly with itself (as a sanity check), followed by GABAR-1 and Vglut-1. We were confused to see that Vlug-1 correlated the second best with Vglut-1 because the former is a inhibitory synapse marker, and the later is a excitatory synapse marker. 
+We wanted to look at the Pearson correlation between the hotspots from raw images of different markers. As seen from the above graphs, hotspots from GABAR correlated perfectly with itself (as a sanity check), followed by GABABR and VGlut1. We were confused to see that Vlug-1 correlated the second best with Vglut-1 because the former is a inhibitory synapse marker, and the later is a excitatory synapse marker. 
 
 ![ColocviaMed](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/ColocGABABviaMedian.png)
 
