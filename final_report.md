@@ -77,14 +77,19 @@ The covariance matrix does not exhibit any obvious trends.
 
 #### Inferential Analysis
 
-We are now primed to further search our datasets for clusters. We proceeded by using inference analysis to determine how many clusters individual feature columns contained. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 5. We achieved the following results:
+We are now primed to further search our datasets for clusters. Optimally we would do this by using all the features and testing for the presence of clusters. Unfortunately, this is very difficult in the multivariate case. We simplify the process by only testing whether inidividual feature columns cluster into more than one cluster. Hopefully, this will give us some intuition going forward about how to look for clusters. More formally, we assumed that a feature column assumes a Gaussian mixture model with k components. We wanted to know what number of clusters/components is the most likely. Therefore, we iteratively performed statistical tests on k clusters vs k+1 clusters, where k ranges from 1 to 5. We first constructed power curves for our proposed test.
 
 ![ks12](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ks12.png)
 ![ks23](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ks23.png)
 ![ks34](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ks34.png)
 ![ks45](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ks45.png)
 ![ks56](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/ks56.png)
+
+Note that while the power curves look reasonable for k = 1 vs k = 2 and k = 2 vs k = 3, above that the power of our test is quite week. Hence, we will only consider testing for the rpesence of 1-3 clusters. The following plot shows our p-values for the VGlut1 channel.
+
 ![inference](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/inference.png)
+
+As is shown, the test suggests that there is definately more than 1 cluster in the VGlut1 channel. It is unclear exactly how many clsuters there are because, a sshown above, for k > 3 our proposed test has weak power.
 
 Clearly, inference testing supports k > 1. For the feature columns we examined, our inference testing results support the existence of clusters within the data.
 
