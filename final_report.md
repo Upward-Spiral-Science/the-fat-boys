@@ -61,10 +61,17 @@ Unfortunately, this still does not suggest any obvious clusters. Maybe Bayesian 
 
 ![BIC](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/BIC.png)
 
-Indeed, BIC suggests between 5-10 clusters within the data. 
+Indeed, BIC suggests between 5-10 clusters within the data. This is promising. 
+
+Now let's look at the Pearson correlation between the variables. See the figure below.
 
 ![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
+
+As expected the two VGlut1 markers are strongly correlated. So are thw two Synapsin markers. Let's also look at the covariance matrix:
+
 ![Covariance](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Covariance.png)
+
+The covariance matrix does not exhibit any obvious trends.
 
 #### Inferential Analysis
 
