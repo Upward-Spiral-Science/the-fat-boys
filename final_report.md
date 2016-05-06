@@ -112,11 +112,11 @@ To test for identical distribution, we assumed that the data is sampled from a G
 #### Further Exploration and Clustering
 
 
-To further explore our data, we divided the synapses into two classes, inhibitory and excitatory, by applying a threshold on their VGlut1 expression. We log-normalized our data and filtered out synapses with high DAPI or low tubulin expression. 
+To further explore our data, we divided the synapses into two classes, inhibitory (group 1) and excitatory (group 2), by applying a threshold on their VGlut1 expression. We log-normalized our data and filtered out synapses with high DAPI or low tubulin expression. 
 
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
-After filtering and thresholding, we project the data onto a low dimensional space and performed K-means clustering. As we can see, the clustering algorithm did a terrific job separating the two groups. 
+After filtering and thresholding, we project the data onto a low dimensional space and colored the synapses according to their group. As we can see, the clustering algorithm did a terrific job separating the two groups. 
 
 We also tried performing hierarchical clustering on the correlation matrix of integrated brightness. The results are shown in the dendrogram below. While we have to be cautious in interpreting the results, we observe that markers that can be broadly classified as inhibitory/excitatory seem to cluster/correlate well with each other. 
 
@@ -227,7 +227,13 @@ We computed the correlation on log-normalized features across different excitato
 
 #### Further Exploration and Clustering
 
+We decided to log transform the data due to the huge range of possible values and the need to filter out the noise. We understand that DAPI should not be present in the synapse, and that tubulin should be highly expressed at the synapse. Based on these criteria, we have filtered many of the synpases, with about 1/10th of the synapse that fit the criteria remaining in our dataset for analysis. 
 
+We know that VGlut1 is the benchmark marker for excitatory vs inhibitory synapses. We took the average of VGlut1 expression levels across the synapses and use that as a threshold. Synapses with VGlut1 expression higher than the threshold were called excitatory (group 1), and cells with VGlut1 expression levels lower than the threshold were called inhibitory (group 2). 
+
+We performed principal components analysis on this data. We color group 1 and 2 with blue and red, and we observe that the resulting graph shows obvious and clear delineation between the two groups. 
+
+We further performed hierarchical clustering on the correlation matrix of the integrated brightness feature. 
 
 
 #### Computer Vision and Colocalization Analysis
