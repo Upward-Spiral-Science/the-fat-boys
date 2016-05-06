@@ -256,19 +256,20 @@ We computed the correlation on log-normalized features across different excitato
 
 #### Further Exploration and Clustering
 
-We decided to log transform the data due to the huge range of possible values and the need to filter out the noise. We understand that DAPI should not be present in the synapse, and that tubulin should be highly expressed at the synapse. Based on these criteria, we have filtered many of the synpases, with about 1/10th of the synapse that fit the criteria remaining in our dataset for analysis. 
+After normalizing the data, we also log-transformed it to make our analysis more robust to outliers and noise. We also thresholded away all samples with synapsin intensity below threshold. Only 10% of the samples remained after this.
 
-We know that VGlut1 is the benchmark marker for excitatory vs inhibitory synapses. We took the average of VGlut1 expression levels across the synapses and use that as a threshold. Synapses with VGlut1 expression higher than the threshold were called excitatory (group 1), and cells with VGlut1 expression levels lower than the threshold were called inhibitory (group 2). 
+We generated pseudo-labels for the samples by examining their integrated intensity in the VGlut1 channels. For intensities above the mean, we labeled the sample as excitatory (group 1). THose below the mean were called inhibitory (group 2). 
 
-We performed principal components analysis on this data. We color group 1 and 2 with blue and red, and we observe that the resulting graph shows obvious and clear delineation between the two groups. 
+We them performed 2D embedding via PCA on this data. We color group 1 and 2 with blue and red, and we observe that the resulting graph shows obvious and clear delineation between the two groups. 
 
 We further performed hierarchical clustering on the correlation matrix of the integrated brightness feature. 
 
 
 #### Computer Vision and Colocalization Analysis
-We investigated how well a set of peaks on the raw images of a marker colocalized with another set of peaks on the raw images of another marker. To accomplish this, we first subsampled on the images to find a section of the images to anlyze, denoise the images through applying a hard threshold and non-max supression, and finally recorded the peak locations. 
 
-We first picked out the hospots for the GABAR-1 markers, and found the spatial correlation between these hotspots with those on the images for all other markers based on a 1-neareast neighbor test. Then we performed the same procedure for the hostpots of all other images and constructed the correspdoning correlation heatmap. 
+We first investigated colocalization by computing the Pearson correlation coefficient between the raw images of different channels. Our results are described above.
+
+The issue with the above procedure is that it only does pixel to pixel comparisons, and hence cannot account for point swhich do not overlap perfectly but are nonetheless close together. Hence, it is unclear whether the above is truly testing colocalization. Instead, an object based approuch is better. The way this worls is that we first locate the (x,y,z) coordinates of the synapses in each channel. Then we compute the median minimum distance for the synapses in channel 1 to the synapses in channel 2. The gives us a measure of colocalization. Finding synapses is difficult to even visually. Several methoids exist, foremost among them being the undecimated wavelet transform for point detection, Do to time constraints we do this via a simplified algorithm: we used non-maximal supression, thresholding via the image mean, to find hotspots in the images, which roughly correlates to synapse location. In order to find nearest-neighbors assumed that the thickness of each slice was 100 nm and the size of eahc pixel was 100 nm x 100 nm (therefore each voxel was 100 nm x 100 nm x 70 nm) and constructed a k-d tree. Below we have plotted the median minimal distance for GABABR versus the other markers. This plot confirmed the trend that GABABR correlated really well with the VGlut markers compared to other markers.
 
 In addition, we wanted to know, for a given hotspot on the raw images of channel A, the distribution of the neighboring hotspots on the images of other channels. For each stack of images we applied a hard threshold and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 1.5 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
 
