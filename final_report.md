@@ -37,6 +37,8 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
+Unless otherwise stated, all analysis was done on f0, the integrated brightness feature.
+
 We are now ready to begin exploring the dataset. For now, we focus only on the large CSV file we were given. We will worry about the raw images later. We first normalize our data by converting to z-scores. Then we check the Feature Marginals. See the figure below.
 
 ![Marginals](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Marginals.png)
@@ -125,14 +127,24 @@ To test for identical distribution, we assumed that the data is sampled from a G
 
 #### Further Exploration and Clustering
 
+In order to further explore the data werealized that we needed to deal with the outliers. We did this by thresholding the samples based on their value in the Synapsin_1 marginal. We threw out all the samples with a synapsin integrated brightness intensity below threshold. This is the Synapsin marginal before thresholding. 
 
-To further explore our data, we divided the synapses into two classes, inhibitory (group 1) and excitatory (group 2), by applying a threshold on their VGlut1 expression. We log-normalized our data and filtered out synapses with high DAPI or low tubulin expression. 
+![SynapsinMarginal](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/SynapsinMarginal.png)
+
+This is the Synapsin marginal after thresholding.
+
+![SynapsinMarginalPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/SynapsinMarginalPostrm.png)
+
+Thsi process removed approximately 90% of our data. For the rest of the analysis, we use the synapsin thresholded data.
+
+To further explore our data, we divided the synapses into two classes, inhibitory (group 1) and excitatory (group 2), by applying a threshold on their VGlut1 expression (above the mean implies excitatory and below the mean imples inhibitory). We log-normalized our data and 2D embedded it (thresholded on synapsin) via PCA. We then colored it based on whether it eas inhibitory or excitatory. See the result below:
 
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
-After filtering and thresholding, we project the data onto a low dimensional space and colored the synapses according to their group. As we can see, the clustering algorithm did a terrific job separating the two groups. 
 
-We also tried performing hierarchical clustering on the correlation matrix of integrated brightness. The results are shown in the dendrogram below. While we have to be cautious in interpreting the results, we observe that markers that can be broadly classified as inhibitory/excitatory seem to cluster/correlate well with each other. 
+With the outliers removed, We can now see separation between the excitatory and inhibitory synapses.
+
+Next, we also tried performing hierarchical clustering on the correlation matrix of integrated brightness. The results are shown in the dendrogram below. While we have to be cautious in interpreting the results, we observe that markers that can be broadly classified as inhibitory/excitatory seem to cluster/correlate well with each other. 
 
 ![Dendrogram](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Dendrogram.png)
 
