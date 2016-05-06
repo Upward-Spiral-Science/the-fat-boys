@@ -67,7 +67,7 @@ Now let's look at the Pearson correlation between the variables. See the figure 
 
 ![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
 
-As expected the two VGlut1 markers are strongly correlated. So are thw two Synapsin markers. Let's also look at the covariance matrix:
+As expected the two VGlut1 markers are strongly correlated. So are the two Synapsin markers. Interestingly, the VGlut1 marker and the Synapsin marker are also storngly correlated with each other. Let's also look at the covariance matrix:
 
 ![Covariance](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Covariance.png)
 
