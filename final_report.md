@@ -104,9 +104,7 @@ The classification accuracy on real data was based on the five tested classifier
 Next, We need to test new assumptions and generate new distributions to sample from; we would most likely sample from Gaussians that are correlated. Also, we can calculate means and standard deviation from the real data, and then construct the parametric gaussian model based on those values to see if we can get a better null distribution.
 
 
-Furthermore we want to see if each marker could be used to predict another marker. To do so for any arbitrary chosen marker, we employed all other markers as the features to build a classifier for the chosen feature. To create labels for the chosen marker, we assigned the expression instances into two groups through thresholding. Several types of classifiers were trained and tested using LOO cross-validation, and some results are shown in the figure below.
-
-![accuracy of classifier] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/Accuracy_Classifier.png)
+Furthermore we want to see if each marker could be used to predict another marker. To do so for any arbitrary chosen marker, we employed all other markers as the features to build a classifier for the chosen feature. To create labels for the chosen marker, we assigned the expression instances into two groups through thresholding. Several types of classifiers were trained and tested using LOO cross-validation, and the results were better than just chances (50%)
 
 Given a chosen marker, rather than using all other markers as the features, we then only used a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
