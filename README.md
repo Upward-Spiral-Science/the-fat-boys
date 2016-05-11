@@ -31,7 +31,10 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
   > Asking the 6 types of scientific questions about the project topic
 
 ####Assignment 3
-[**``./code/descriptive_and_exploratory_answers.ipynb``**](./draft/Assignment3.ipynb)
+[**``./draft/descriptive_and_exploratory_answers.ipynb``**](./draft/Assignment3.ipynb)
+  > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
+  
+[**``./draft/abridged_descriptive_and_exploratory_answers.ipynb``**](./draft/Assignment3_Abridged.ipynb)
   > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
 
 [**``./draft/revised_questions.md``**](./draft/revised_questions.md)
