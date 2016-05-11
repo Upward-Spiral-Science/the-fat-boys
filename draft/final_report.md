@@ -88,10 +88,10 @@ We make the assumption that the data is independent and identically distributed 
 To test for independence, we look at the correlation matrices for each feature across all the excitatory and inhibitory markers. If the data is indeed independent, then we should expect to see off diagonal terms in the correlation matrices to be close to 0. On the other hand, if the data is not independent, then we would expect to see significant deviations from 0 on the off-diagonal terms in the correlation matrices. 
 
 
-![Integrated](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Integrated.png)
-![Local](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Local.png)
-![Center](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Center.png)
-![Moment](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Moment.png)
+![Integrated](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/1_test.png)
+![Local](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/2_test.png)
+![Center](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/3_test.png)
+![Moment](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/4_test.png)
 To test for identical distribution, we assumed that the data is sampled from a Gaussian Mixture Model. We test for the optimal number of components under the GMM. We make a plot of Bayesian Information Criterior (BIC) vs number of components in the GMM. If the data is identically distributed, the optimal number of component should be very close to 1. 
 #### Further Clustering 
 
