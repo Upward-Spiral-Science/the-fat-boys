@@ -276,3 +276,4 @@ In order to find nearest-neighbors assumed that the thickness of each slice was 
 In addition, we wanted to know, for a given hotspot on the raw images of channel 1, the distribution of the neighboring hotspots on the images of other channels. For each stack of images we first hotspots via the non-max supression algorithm described above. We then computed for any given pair of channel 1 and 2, the distribution of the hotspots in channel 1 within 1.5 pixels of any given hostpots in channel 2 after superimposeing the two channels on top of each other. 
 
 * We also tried out other methods for denoising the image, such as unsharp masking, de-convolution, and a series of edge-based threshold filtering. The results produced from those methods were not so informative and thus were not included in the final report
+ 
