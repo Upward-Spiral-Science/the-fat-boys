@@ -37,12 +37,32 @@ The natural first step when working with any data is to ask exploratory and desc
 
 #### Exploratory Analysis
 
-![Marginals]()
+We are now ready to begin exploring the dataset. For now, we focus only on the large CSV file we were given. We will worry about the raw images later. We first normalize our data by converting to z-scores. Then we check the Feature Marginals. See the figure below.
+
+![Marginals](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Marginals.png)
+
+This looks interesting. Apparently all the distributions are right-skewed and unimodal. THis is hardly what we would expect, given the fact that we know that there ae excitatory and inhibitory populations of neurons. Rather, w ewould expect at th every least bimodal distributions for the markers wich correspond to excitatory/inhibitory synapses. Even more interesting is the fact that the synapsin marginal has a high peak for low values and then has few sampels at high values.  THis is the opposite of what we would expect, as we know that synapses should have high synapsin fluorescence. This appears to be indicative of the fact that there a lot of outliers in our dataset which are not synapses. This is actually not too surprising, as the computer vision algorithm used to determine what bright patches in the raw images were synapses generates a huge number of false positives. Just for the sake of curiosity, let us look at what the data looks like via two-dimensional PCA embedding:
+
 ![PCA](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/PCA.png)
+
+And lets also look at the scree plot:
+
 ![Scree](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Scree.png)
-![MarginalswLog]()
+
+The PCA result does not reveal any obvious clusters, but this is hardly surprising given the huge number of outliers, which will negatively affect PCA. Also, as indicated by the scree plot, the PCA plot only retains 12% of th original data variance. Hence, the data does not appear to be well contained in a lower dimension subspace. None of these htigns are good news. What is clear, however, is that we need to find a way to deal with the outlier values. A good way of doing this is by taking the logarithm of the normalized data. Hence, outleirs will be "conmpressed" to be closer to the rest of the data. Below we show the marginals after Log scaling:
+
+![MarginalswLog](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MarginalsafterLog.png)
+
+And now we should the log-normalzied data embedded into two-dimensions via tSNE.
+
 ![tSNE](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/tSNE_LogNormalized.png)
+
+Unfortunately, this still does not suggest any obvious clusters. Maybe Bayesian Information Criterion (BIC) will be more optimistic in reagrds to presence of clusters. See the BIC figure below for various constraints on the covariance matrix.
+
 ![BIC](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/BIC.png)
+
+Indeed, BIC suggests between 5-10 clusters within the data. 
+
 ![Correlation](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Correlation.png)
 ![Covariance](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Covariance.png)
 
@@ -63,11 +83,20 @@ Furthermore we want to see if each marker could be used to predict another marke
 Given a chosen marker, rather than using all other markers as the features, we then only used a subset of the markers as the features. For instance, as a control group, we tried to predict an inhibitory neuron marker with other inhibitory neuron markers. Then we attempted to use a set of markers having known association with the chosen markers as the features. However, the initial result for this experiment was not good, as in most cases the classifiers could not predict the chosen marker better than chances. 
 
 #### Testing Assumptions
+We make the assumption that the data is independent and identically distributed (i.i.d.) 
 
-#### Further Clustering
+To test for independence, we look at the correlation matrices for each feature across all the excitatory and inhibitory markers. If the data is indeed independent, then we should expect to see off diagonal terms in the correlation matrices to be close to 0. On the other hand, if the data is not independent, then we would expect to see significant deviations from 0 on the off-diagonal terms in the correlation matrices. 
 
-![MarginalsSynapsin]()
-![MarginalsSynapsinPostrm]()
+
+![Integrated](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Integrated.png)
+![Local](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Local.png)
+![Center](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Center.png)
+![Moment](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Moment.png)
+To test for identical distribution, we assumed that the data is sampled from a Gaussian Mixture Model. We test for the optimal number of components under the GMM. We make a plot of Bayesian Information Criterior (BIC) vs number of components in the GMM. If the data is identically distributed, the optimal number of component should be very close to 1. 
+#### Further Clustering 
+
+![MarginalsSynapsin](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginal.png)
+![MarginalsSynapsinPostrm](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/SynapsinMarginalPostrm.png)
 ![PCAPostrm](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Clustafterrm.png)
 
 
@@ -78,6 +107,14 @@ Given a chosen marker, rather than using all other markers as the features, we t
 ![ColocviaMed](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/ColocGABABviaMedian.png)
 ![ColocviaAll](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColocwDAPI.png)
 ![ColocDAPI](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColoc.png)
+
+![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/2.png)
+
+![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/1.png)
+
+![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/3.png)
+
+![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/4.png)
 
 #### Next Steps
 The conducted exploratory analysis has raised several new questions which will need to be addressed in future work. First, judging from the feature marginal distributions, it appears that over half of the synapses in the marker file are outliers. This stems from the fact that there are a large number of false positives in the original synapse detection algorithm which was run on the raw images. This means that any conclusions we draw from the primary marker file are immediately questionable, as the majority of robust methods only function when less than half the samples are outliers. We have attemtped to deal with this by log-normalizing the data before conducting any analysis. We have also implemented robust methods of estimating localtion and scatter and avoided using inferential tests which are sensitive to outliers. Nonetheless, this is likely a half measure. What needs to be done in future work is that the original images need to be re-analyzed for synapses via an algorithm that generates fewer false positives at the expense of more false negatives. Next, our work suggests that the synapses likely do cluster, although we have been unable to find them due to the large quantity of outliers. Our work needs to be redone once a dataset with less outliers is generated. Finally, our work shows that markers which we explect to colocalize and cluster strongly with other markers do not necessarily do so. For example, the GABAB receptor, which is conventionally considered an inhibitory marker, seems to colocalize strongly with the excitatory markers. Similarly, Gephyr seems to colocalize strongly will all of the markers, something which cannot easily be explained. Additionally, VGlut2 and Glur2 colocalize extremely strongly. As far as we know, none of these phenomena have been describe din the literature and, if they are correct, they are incredibly important to the field of neuroscience. Undoubtedly, there are even more discoveries to be made from this dataset.
@@ -93,7 +130,8 @@ Each of the questions required code and (for the inferential, predictive, and as
 | Predictive  | [**``./Assignment5_Classification_FatBoys.ipynb``**](./Assignment5_Classification_FatBoys.ipynb) |
 | Testing Assumptions | [**``./Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./Assignment6_Checking_Assumptions_Fatboys.ipynb) |
 | Further Clustering | [**``./Ivan_Report.ipynb``**](./Ivan_Report.ipynb) |
-| Computer Vision and Colocalization Analysis | [**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb),[**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m) |
+| Previous Work and Literature Search| [**``../Edric-Report-LiteratureSearch.md``**](../Edric-Report-LiteratureSearch.md)|
+| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](../code/Colocalization/Synapse_Vis.m),[**``./IvanReport_4_27.ipynb``**](./IvanReport_4_27.ipynb) |
 
 #### Descriptive Analysis
 Our data is off a relatively standard format, so the descriptive analysis was rather straightforward. We simply examined the number of rows and columns in the two datasets, checked them from invalid data values, and then contacted our collaborator to understand what the individual rows/features correspond to.
@@ -132,4 +170,8 @@ The following were the calssifiers that we used ( listed with the associated par
 
 #### Computer Vision and Colocalization Analysis
 
-For each stack of images we applied a hard threshold and then identified the hospots through non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 1.5 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
+We investigated how well a set of peaks on the raw images of a marker colocalized with another set of peaks on the raw images of another marker. To accomplish this, we first subsampled on the images to find a section of the images to anlyze, denoise the images through applying a hard threshold and non-max supression, and finally recorded the peak locations. 
+
+We first picked out the hospots for the GABAR-1 markers, and 
+
+In addition, we wanted to know, for a given hotspot on the raw images of channel A, the distribution of the neighboring hotspots on the images of other channels. For each stack of images we again first subsampled a section to analyze, applied a hard threshold based on the means of the intensity, and then identified the hospots after performing non-max suppression. We then computed for any given pair of channel A and B, the distribution of the hotspots in channel A within 2 pixels of any given hostpots in channel B after superimposeing the two channels on top of each other. 
