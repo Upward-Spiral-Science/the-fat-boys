@@ -123,7 +123,7 @@ To test for independence, we look at the correlation matrices for each feature a
 
 To test for identical distribution, we assumed that the data is sampled from a Gaussian Mixture Model. We test for the optimal number of components under the GMM. We make a plot of Bayesian Information Criterior (BIC) vs number of components in the GMM. If the data is identically distributed, the optimal number of component should be very close to 1. However, what we observe is that our data has optimal number of components very close to around 2-3. Hence, we cannot conclude that the data is identically distributed. 
 
-![Identical](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Identical.png)
+![Identical](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/GMM_component.png)
 
 #### Further Exploration and Clustering
 
