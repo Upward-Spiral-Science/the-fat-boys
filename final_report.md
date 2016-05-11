@@ -98,7 +98,7 @@ Clearly, inference testing supports k > 1. For the feature columns we examined, 
 
 #### Predictive Analysis
 
-![simulated_data] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/simulated.png)
+![simulated_data] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/simulated1.png)
 
 The classification accuracy on real data was based on the five tested classifiers around the low 80s. The classification accuracy on our null model of independent Gaussian-distributed features was slightly better than chance at around the low 50s. This means that the features of true data was likely not independent and highly correlated. The marginal plots of the features did look bell-curve like though, so the gaussian assumption was not out of nowhere.
 Next, We need to test new assumptions and generate new distributions to sample from; we would most likely sample from Gaussians that are correlated. Also, we can calculate means and standard deviation from the real data, and then construct the parametric gaussian model based on those values to see if we can get a better null distribution.
