@@ -186,14 +186,14 @@ Each of the questions required code and (for the inferential, predictive, and as
 
 | Question Type | Code |
 |---------------|------|
-| Descriptive | [**``./draft/Assignment3_Abridged.ipynb``**](./draft/Assignment3_Abridged.ipynb) |
-| Exploratory | [**``./draft/Assignment3_Abridged.ipynb``**](./draft/Assignment3_Abridged.ipynb) |
-| Inferential | [**``./draft/Assignment4.ipynb``**](./draft/Assignment4.ipynb) |
-| Predictive  | [**``./draft/Assignment5_Classification_FatBoys.ipynb``**](./draft/Assignment5_Classification_FatBoys.ipynb) |
-| Testing Assumptions | [**``./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb) |
-| Further Clustering | [**``./draft/Ivan_Report.ipynb``**](./draft/Ivan_Report.ipynb) |
-| Previous Work and Literature Search| [**``./Edric-Report-LiteratureSearch.md``**](./Edric-Report-LiteratureSearch.md)|
-| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./draft/IvanReport_4_27.ipynb``**](./draft/IvanReport_4_27.ipynb), [**``./draft/khuang28_4_30_Hotspots_Identificaiton``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_30_Hotspots_Identificaiton.m),[**``./draft/khuang28visualization043016.pdf``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28visualization043016.pdf), [**``./draft/khuang28hotspotcv_4_28``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/draft/khuang28_4_20_Hotspots_Identificaiton.m), [**``synapse_filter``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/Team%20Fatboys%205%20Updates%20Report%20Part%202.ipynb) |
+| Descriptive | [**``./code/Assignment3_Abridged.ipynb``**](./code/Assignment3_Abridged.ipynb) |
+| Exploratory | [**``./code/Assignment3_Abridged.ipynb``**](./code/Assignment3_Abridged.ipynb) |
+| Inferential | [**``./code/Assignment4.ipynb``**](./code/Assignment4.ipynb) |
+| Predictive  | [**``./code/Assignment5_Classification_FatBoys.ipynb``**](./code/Assignment5_Classification_FatBoys.ipynb) |
+| Testing Assumptions | [**``./code/Assignment6_Checking_Assumptions_Fatboys.ipynb``**](./code/Assignment6_Checking_Assumptions_Fatboys.ipynb) |
+| Further Clustering | [**``./draft/Ivan_Report.ipynb``**](./code/Ivan_Report.ipynb) |
+| Previous Work and Literature Search| [**``./Edric-Report-LiteratureSearch.md``**](./docs/Edric-Report-LiteratureSearch.md)|
+| Computer Vision and Colocalization Analysis | [**``../code/Colocalization/Synapse_Vis.m``**](./code/Colocalization/Synapse_Vis.m),[**``./code/IvanReport_4_27.ipynb``**](./code/IvanReport_4_27.ipynb), [**``./code/khuang28_4_30_Hotspots_Identificaiton``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/code/khuang28_4_30_Hotspots_Identificaiton.m),[**``./code/khuang28visualization043016.pdf``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/code/khuang28visualization043016.pdf), [**``./code/khuang28hotspotcv_4_28``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/code/khuang28_4_20_Hotspots_Identificaiton.m), [**``synapse_filter``**](https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/docs/Team%20Fatboys%205%20Updates%20Report%20Part%202.ipynb) |
 
 
 #### Descriptive Analysis
