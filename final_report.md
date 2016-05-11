@@ -146,7 +146,7 @@ With the outliers removed, We can now see separation between the excitatory and 
 
 Next, we also tried performing hierarchical clustering on the correlation matrix of integrated brightness. The results are shown in the dendrogram below. While we have to be cautious in interpreting the results, we observe that markers that can be broadly classified as inhibitory/excitatory seem to cluster/correlate well with each other. 
 
-![Dendrogram](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/cluster.png)
+![Dendrogram](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/cluster1.png)
 
 
 #### Computer Vision and Colocalization Analysis
