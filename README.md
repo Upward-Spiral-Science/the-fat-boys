@@ -37,9 +37,6 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
 [**``./draft/abridged_descriptive_and_exploratory_answers.ipynb``**](./draft/Assignment3_Abridged.ipynb)
   > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
 
-[**``./draft/revised_questions.md``**](./draft/revised_questions.md)
-  > Updated the questions based on our initial analysis
-
 ###Assignment 4
 [**``./code/inferential_simulation.ipynb``**](./draft/Assignment4)
   > Formally asked inferential question about the data, and answered it on simulated data from the null model, alternate model, and real data
@@ -53,16 +50,23 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
   > In the previous two assignments, we made assumptions about our data. Now, we will check them and see whether or not they are true, and if not, update our understanding or assumptions about our data to those which are *more* right.
 
 ###Assignment 7
-[**``./draft/summary_presentation.pdf``**](./draft/summary_presentation.pdf)
+[**``./draft/summary_presentation.pdf``**](./draft/JovoPres.pptx)
   > Presentation about findings and methods used throughout the project.
 
 ###Assignment 8
-[**``./docs/progress_report.md``**](./docs/progress_report.md)
+[**``./docs/progress_report.md``**](./master/Progress_Report.md)
   > Report stating all analysis completed to date, as well as logical next steps.
 
-###Assignment 9
-[**``./code/extended_exploratory.ipynb``**](./code/extended_exploratory.ipynb)
-  > 10 more questions and plots about my data
+### Other Reports and Individual Work (Miscellaneous)
+
+[**``./docs/progress_report.md``**](./master/Progress_Report.md)
+  > Report stating all analysis completed to date, as well as logical next steps.
+  
+  [**``./docs/progress_report.md``**](./master/Progress_Report.md)
+  > Report stating all analysis completed to date, as well as logical next steps.
+  
+  [**``./docs/progress_report.md``**](./master/Progress_Report.md)
+  > Report stating all analysis completed to date, as well as logical next steps.
 
 ###Final Report
 [**``./final_report.md``**](./final_report.md)
