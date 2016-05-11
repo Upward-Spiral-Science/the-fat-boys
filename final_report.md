@@ -173,8 +173,8 @@ Again we see that GABABR, which is conventionally considered an inhibitory marke
 
 Next, we tried to evaluate for a given hotspot on the raw images of a marker, the distribution of the neighboring hotspots on the images of another marker. See the image below. We have conducted this analysis for all 24 markers, but we are examining the results for the GABAR hotspots over here. As a sanity check, all hotspots from the GABAR-1 images have at least one neighbor when compared to the same images (the count came from the hotspot itself).  However, for most hotspots on the GABAR-1 images, there are no neighboring hotspots on the images for other markers, even when we were comparing GABAR-1 and GABAR-2. Nonetheless, when compared to the images from Glur-2 and GABABR1-2 markers, there were some hotspots on the GBAR-1 channel having 2 neighboring peaks on those images. Glur-2 is an excitatory marker while GABAR is an inhibitory marker, thus this observation is worth investigating. 
 
-![Distirbution] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/1.png)
 ![Distirbution] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/2_new.png)
+![Distirbution] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/1.png)
 ![Distirbution] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/3_new.png)
 ![Distirbution] (https://github.com/Upward-Spiral-Science/the-fat-boys/blob/master/figs/FinalReport/4_new.png)
 
