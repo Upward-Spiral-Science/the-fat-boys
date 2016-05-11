@@ -3,19 +3,17 @@ This repository is the repository for Team Fat Boys in Art of Data Science at Jo
 
 ##Contact
 
-Edric Tam
+Edric Tam  Ivan Kuznetsov  Kevin Huang
 
 Handle: [fatboy1](http://github.com/fatboy1)
 
 Email:[etam2@jhu.edu](mailto:etam2@jhu.edu)
 
-Ivan Kuznetsov
 
 Handle: [ikuznet1](http://github.com/ikuznet1)
 
 Email:[ikuznet1@jhu.edu](mailto:ikuznet1@jhu.edu)
 
-Kevin Huang
 
 Handle: [khuang28jhu](http://github.com/khuang28jhu)
 
