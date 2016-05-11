@@ -41,7 +41,7 @@ Unless otherwise stated, all analysis was done on f0, the integrated brightness 
 
 We are now ready to begin exploring the dataset. For now, we focus only on the large CSV file we were given. We will worry about the raw images later. We first normalize our data by converting to z-scores. Then we check the Feature Marginals. See the figure below.
 
-<img src="https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Marginals.png" alt="Marginals" style="width: 800px;"/>
+<img src="https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/Marginals.png" alt="Marginals" style="width: 300px;"/>
 
 This looks interesting. Apparently all the distributions are right-skewed and unimodal. THis is hardly what we would expect, given the fact that we know that there ae excitatory and inhibitory populations of neurons. Rather, w ewould expect at th every least bimodal distributions for the markers wich correspond to excitatory/inhibitory synapses. Even more interesting is the fact that the synapsin marginal has a high peak for low values and then has few sampels at high values.  THis is the opposite of what we would expect, as we know that synapses should have high synapsin fluorescence. This appears to be indicative of the fact that there a lot of outliers in our dataset which are not synapses. This is actually not too surprising, as the computer vision algorithm used to determine what bright patches in the raw images were synapses generates a huge number of false positives. Just for the sake of curiosity, let us look at what the data looks like via two-dimensional PCA embedding:
 
