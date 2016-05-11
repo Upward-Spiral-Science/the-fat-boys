@@ -109,8 +109,11 @@ To test for identical distribution, we assumed that the data is sampled from a G
 ![ColocDAPI](https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/FinalReport/MatrixColoc.png)
 
 ![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/2.png)
+
 ![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/1.png)
+
 ![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/3.png)
+
 ![Distirbution] (https://raw.githubusercontent.com/Upward-Spiral-Science/the-fat-boys/master/figs/4.png)
 
 #### Next Steps
