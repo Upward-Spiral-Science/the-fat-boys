@@ -61,14 +61,14 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
 
 Further Exploratory Analysis Report
 
-[**``./docs/Further_Exploratory.md``**](./docs/Team%20Fatboys%205%20Updates%20Report%20Part%201%20(Updates%201%2C2%2C3%2C4).ipynb)
-  > Report stating all analysis completed to date, as well as logical next steps.
+[**``./docs/Further_Exploratory_1.md``**](./docs/Team%20Fatboys%205%20Updates%20Report%20Part%201%20(Updates%201%2C2%2C3%2C4).ipynb)
+  > Report with some further clustering and exploratory analysis (Part 1)
   
-  [**``./docs/progress_report.md``**](./master/Progress_Report.md)
-  > Report stating all analysis completed to date, as well as logical next steps.
+[**``./docs/Further_Exploratory_2.md``**](./docs/Team%20Fatboys%205%20Updates%20Fixed%20Report%20Part%202.ipynb)
+  > Report with some further clustering and exploratory analysis (Part 2)
   
-  [**``./docs/progress_report.md``**](./master/Progress_Report.md)
-  > Report stating all analysis completed to date, as well as logical next steps.
+[**``./docs/Literature-Search.md``**](./docs/Literature-Search.md)
+  > Report with some literature search about GABA and VGlut colocalization.
 
 ###Final Report
 [**``./final_report.md``**](./final_report.md)
