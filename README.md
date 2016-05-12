@@ -69,6 +69,12 @@ Further Exploratory Analysis Report
   
 [**``./docs/Literature-Search.md``**](./docs/Literature-Search.md)
   > Report with some literature search about GABA and VGlut colocalization.
+  
+Individual Reports and Work can be found here: 
+
+[**``./docs/Individual_Reports/``**](./docs/Individual_Reports/)
+
+
 
 ###Final Report
 [**``./final_report.md``**](./final_report.md)
