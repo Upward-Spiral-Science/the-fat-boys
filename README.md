@@ -31,22 +31,22 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
   > Asking the 6 types of scientific questions about the project topic
 
 ####Assignment 3
-[**``./draft/descriptive_and_exploratory_answers.ipynb``**](./draft/Assignment3.ipynb)
+[**``./draft/descriptive_and_exploratory_answers.ipynb``**](./code/Assignment3.ipynb)
   > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
   
-[**``./draft/abridged_descriptive_and_exploratory_answers.ipynb``**](./draft/Assignment3_Abridged.ipynb)
+[**``./draft/abridged_descriptive_and_exploratory_answers.ipynb``**](./code/Assignment3_Abridged.ipynb)
   > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
 
 ###Assignment 4
-[**``./code/inferential_simulation.ipynb``**](./draft/Assignment4)
+[**``./code/inferential_simulation.ipynb``**](./code/Assignment4)
   > Formally asked inferential question about the data, and answered it on simulated data from the null model, alternate model, and real data
 
 ###Assignment 5
-[**``./code/classification_simulation.ipynb``**](./draft/Assignment5_Classification_FatBoys.ipynb)
+[**``./code/classification_simulation.ipynb``**](./code/Assignment5_Classification_FatBoys.ipynb)
   > Formally asked classification question about the data, and answered it on simulated data from the alternate model, and real data
 
 ###Assignment 6
-[**``./code/test_assumptions.ipynb``**](./draft/Assignment6_Checking_Assumptions_Fatboys.ipynb)
+[**``./code/test_assumptions.ipynb``**](./code/Assignment6_Checking_Assumptions_Fatboys.ipynb)
   > In the previous two assignments, we made assumptions about our data. Now, we will check them and see whether or not they are true, and if not, update our understanding or assumptions about our data to those which are *more* right.
 
 ###Assignment 7
@@ -54,7 +54,7 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
   > Presentation about findings and methods used throughout the project.
 
 ###Assignment 8
-[**``./docs/progress_report.md``**](./master/Progress_Report.md)
+[**``./docs/progress_report.md``**](./draft/Progress_Report.md)
   > Report stating all analysis completed to date, as well as logical next steps.
 
 ### Other Reports and Individual Work (Miscellaneous)
