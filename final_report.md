@@ -278,3 +278,4 @@ In addition, we wanted to know, for a given hotspot on the raw images of channel
 
 * We also tried out other methods for denoising the image, such as unsharp masking, de-convolution, and a series of edge-based threshold filtering. The results produced from those methods were not so informative and thus were not included in the final report
  
+ 
