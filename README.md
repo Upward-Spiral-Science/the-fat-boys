@@ -31,14 +31,14 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
   > Asking the 6 types of scientific questions about the project topic
 
 ####Assignment 3
-[**``./draft/descriptive_and_exploratory_answers.ipynb``**](./code/Assignment3.ipynb)
+[**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/Assignment3.ipynb)
   > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
   
-[**``./draft/abridged_descriptive_and_exploratory_answers.ipynb``**](./code/Assignment3_Abridged.ipynb)
+[**``./code/abridged_descriptive_and_exploratory_answers.ipynb``**](./code/Assignment3_Abridged.ipynb)
   > Begin answering the descriptive and exploratory questions. Once answered them the questions we asked will be revised - discuss those that we couldn't fully answer, ask follow up questions that would be informative, etc.
 
 ###Assignment 4
-[**``./code/inferential_simulation.ipynb``**](./code/Assignment4)
+[**``./code/inferential_simulation.ipynb``**](./code/Assignment4.ipynb)
   > Formally asked inferential question about the data, and answered it on simulated data from the null model, alternate model, and real data
 
 ###Assignment 5
@@ -54,12 +54,14 @@ Email:[khuang28@jhu.edu](mailto:khuang28@jhu.edu)
   > Presentation about findings and methods used throughout the project.
 
 ###Assignment 8
-[**``./docs/progress_report.md``**](./draft/Progress_Report.md)
+[**``./docs/progress_report.md``**](./docs/Progress_Report.md)
   > Report stating all analysis completed to date, as well as logical next steps.
 
 ### Other Reports and Individual Work (Miscellaneous)
 
-[**``./docs/progress_report.md``**](./master/Progress_Report.md)
+Further Exploratory Analysis Report
+
+[**``./docs/Further_Exploratory.md``**](./docs/Team%20Fatboys%205%20Updates%20Report%20Part%201%20(Updates%201%2C2%2C3%2C4).ipynb)
   > Report stating all analysis completed to date, as well as logical next steps.
   
   [**``./docs/progress_report.md``**](./master/Progress_Report.md)
